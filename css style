@@ -1,0 +1,42 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8E1;
+    color: #4E342E;
+    line-height: 1.6;
+}
+
+header {
+    background: #4E342E;
+    color: #FFF8E1;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #FFAB91;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: url('../images/coffee.jpg') no-repeat center center/cover;
+    color: #FFF8E1;
+}
+
+.special {
+    text-align: center;
+    background: #FFAB91;
+    padding: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #4E342E;
+    color: #FFF8E1;
+}
