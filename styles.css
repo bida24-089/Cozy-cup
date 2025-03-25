@@ -20,6 +20,46 @@ nav a {
     text-decoration: none;
 }
 
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 1em 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .menu-section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+
 .hero {
     text-align: center;
     padding: 50px;
