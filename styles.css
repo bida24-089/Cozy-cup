@@ -75,7 +75,6 @@ body {
             font-size: 0.8em;
             color: #666;
         }
-
 body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
@@ -88,24 +87,40 @@ body {
             background-color: #8B4513;
             color: #fff;
             padding: 1em 0;
+            margin-bottom: 20px;
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        .menu-section {
-            margin: 20px auto;
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 0 auto;
             padding: 20px;
-            max-width: 600px;
+        }
+        .menu-section {
+            padding: 20px;
+            width: 300px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
         }
         .menu-item {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             padding: 10px 0;
             border-bottom: 1px solid #ddd;
+        }
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 5px;
         }
         .menu-item:last-child {
             border-bottom: none;
@@ -115,24 +130,3 @@ body {
             font-size: 0.8em;
             color: #666;
         }
-
-.hero {
-    text-align: center;
-    padding: 50px;
-    background: url('../images/coffee.jpg') no-repeat center center/cover;
-    color: #FFF8E1;
-}
-
-.special {
-    text-align: center;
-    background: #FFAB91;
-    padding: 20px;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #4E342E;
-    color: #FFF8E1;
-}
