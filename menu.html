@@ -19,47 +19,227 @@
         </nav>
     </header>
 
-    <div class="menu-container">
-        <section class="menu-section">
-            <h2>Coffee</h2>
-            <div><img src=alt=Espresso - $2.50></div>
-            <div><img src=alt=Americano- $3.00</div>
-            <div class=<img src="Color Glazed Cappuccino Cups with Saucers.jpg"alt="<span>Cappuccino - $3.50</span></div>
-            <div class="menu-item"><img src=alt="Latte" ><span>Latte - $4.00</span></div>
-            <div class="menu-item"><img src=alt="Mocha"><span>Mocha - $4.50</span></div>
-            <div class="menu-item"><img src=alt="Flat White"><span>Flat White - $3.75</span></div>
-        </section>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Haven Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9f4;
+      color: #333;
+    }
 
-        <section class="menu-section">
-            <h2>Pastries</h2>
-            <div class="menu-item"><img src=alt="Croissant"><span>Croissant - $2.00</span></div>
-            <div class="menu-item"><img src=alt="Blueberry Muffin"><span>Blueberry Muffin - $2.50</span></div>
-            <div class="menu-item"><img src=alt="Chocolate Chip Cookie"><span>Chocolate Chip Cookie - $1.50</span></div>
-            <div class="menu-item"><img src=alt="Donut"><span>Glazed Donut - $2.20</span></div>
-            <div class="menu-item"><img src=alt="Bagel"><span>Bagel with Cream Cheese - $3.00</span></div>
-        </section>
+    header {
+      background-color: #5a3e36;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        <section class="menu-section">
-            <h2>Lunch</h2>
-            <div class="menu-item"><img src=alt="Grilled Chicken Sandwich"><span>Grilled Chicken Sandwich - $7.50</span></div>
-            <div class="menu-item"><img src=alt="Veggie Wrap"><span>Veggie Wrap - $6.50</span></div>
-            <div class="menu-item"><img src= alt="Caesar Salad"><span>Caesar Salad - $5.00</span></div>
-            <div class="menu-item"><img src= alt="Tomato Basil Soup"><span>Tomato Basil Soup - $4.00</span></div>
-            <div class="menu-item"><img src=alt="Beef Burger"><span>Beef Burger - $8.00</span></div>
-            <div class="menu-item"><img src=alt="Pasta Salad"><span>Pasta Salad - $5.50</span></div>
-        </section>
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
 
-        <section class="menu-section">
-            <h2>Beverages</h2>
-            <div class="menu-item"><img src=alt="Tea"><span>Tea - $2.00</span></div>
-            <div class="menu-item"><img src=alt="Fruit Smoothie"><span>Fruit Smoothie - $4.50</span></div>
-            <div class="menu-item"><img src=alt="Orange Juice"><span>Orange Juice - $3.00</span></div>
-            <div class="menu-item"><img src=alt="Bottled Water"><span>Bottled Water - $1.50</span></div>
-        </section>
+    .section {
+      padding: 2rem;
+    }
+
+    .menu-category h2 {
+      color: #5a3e36;
+      border-bottom: 2px solid #d3bfa8;
+      margin-bottom: 1rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .menu-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item-content {
+      padding: 1rem;
+    }
+
+    .menu-item h3 {
+      margin: 0 0 0.5rem;
+      color: #5a3e36;
+    }
+
+    .menu-item p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #5a3e36;
+      color: white;
+    }
+
+  <section class="section menu-category" id="coffee">
+    <h2>☕ Coffee</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Espresso">
+        <div class="menu-item-content">
+          <h3>Espresso</h3>
+          <p>Bold, classic shot of coffee.</p>
+          <p><strong>$2.50</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1577985051167-7081f2822bb7" alt="Cappuccino">
+        <div class="menu-item-content">
+          <h3>Cappuccino</h3>
+          <p>Espresso with steamed milk foam.</p>
+          <p><strong>$3.00</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1558872785-7e53c1868f6f" alt="Latte">
+        <div class="menu-item-content">
+          <h3>Latte</h3>
+          <p>Smooth espresso and steamed milk.</p>
+          <p><strong>$3.50</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1548943487-a2e4d0642190" alt="Mocha">
+        <div class="menu-item-content">
+          <h3>Mocha</h3>
+          <p>Espresso blended with chocolate.</p>
+          <p><strong>$4.00</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1527169402691-a3cf4ce5d7e0" alt="Iced Coffee">
+        <div class="menu-item-content">
+          <h3>Iced Coffee</h3>
+          <p>Chilled, refreshing coffee over ice.</p>
+          <p><strong>$3.00</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1587731954705-14ab68b3c94e" alt="Caramel Macchiato">
+        <div class="menu-item-content">
+          <h3>Caramel Macchiato</h3>
+          <p>Vanilla, milk, espresso & caramel drizzle.</p>
+          <p><strong>$4.20</strong></p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 COZY CUP Cafe. All rights reserved.</p>
-    </footer>
+  <section class="section menu-category" id="pastries">
+    <h2>🥐 Pastries</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1598373182133-418d4b4fa4e6" alt="Croissant">
+        <div class="menu-item-content">
+          <h3>Butter Croissant</h3>
+          <p>Flaky, golden, buttery layers.</p>
+          <p><strong>$2.80</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1587248729339-3dc3f43fce61" alt="Chocolate Muffin">
+        <div class="menu-item-content">
+          <h3>Chocolate Muffin</h3>
+          <p>Soft and rich with chocolate chips.</p>
+          <p><strong>$2.50</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Cinnamon Roll">
+        <div class="menu-item-content">
+          <h3>Cinnamon Roll</h3>
+          <p>Warm swirl with cream cheese icing.</p>
+          <p><strong>$3.20</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1562059390-a761a084768e" alt="Blueberry Scone">
+        <div class="menu-item-content">
+          <h3>Blueberry Scone</h3>
+          <p>Sweet, crumbly scone with juicy berries.</p>
+          <p><strong>$2.90</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1634064531453-0665631c204c" alt="Apple Danish">
+        <div class="menu-item-content">
+          <h3>Apple Danish</h3>
+          <p>Filled with spiced apple and glazed.</p>
+          <p><strong>$3.00</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-category" id="sandwiches">
+    <h2>🥪 Sandwiches</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1585238341986-0d1b06c32c23" alt="Turkey Sandwich">
+        <div class="menu-item-content">
+          <h3>Turkey & Cheese</h3>
+          <p>Oven-roasted turkey with cheddar.</p>
+          <p><strong>$5.00</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1625948131093-bd9c3e6dbf8e" alt="Veggie Sandwich">
+        <div class="menu-item-content">
+          <h3>Veggie Delight</h3>
+          <p>Hummus, avocado, tomato, lettuce.</p>
+          <p><strong>$4.50</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1616594085725-cd8f47c3adcd" alt="Chicken Panini">
+        <div class="menu-item-content">
+          <h3>Chicken Panini</h3>
+          <p>Grilled chicken, cheese, and pesto.</p>
+          <p><strong>$5.50</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1578916171727-27a45789f67e" alt="Egg Salad Sandwich">
+        <div class="menu-item-content">
+          <h3>Egg Salad</h3>
+          <p>Classic creamy egg on fresh wheat bread.</p>
+          <p><strong>$4.00</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Coffee Haven. All rights reserved.
+  </footer>
+
 </body>
 </html>
+
+        
