@@ -174,3 +174,13 @@ body {
       margin: 0 0 0.5rem;
       color: #5a3e36;
     }
+      .menu-item p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #5a3e36;
+      color: white;
+    }
