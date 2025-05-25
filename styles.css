@@ -1,64 +1,146 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-                font-family: 'Georgia', serif;
-                margin: 0;
-                padding: 0;
-                text-align: center;
-                background-color: #fff3e0;
-                color: #4a4a4a;
-            }
-            header {
-                background-color: #ff6600;
-                color: white;
-                padding: 20px;
-                font-size: 28px;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-            }
-            nav {
-                margin: 20px 0;
-            }
-            nav a {
-                margin: 0 15px;
-                text-decoration: none;
-                color: #ff6600;
-                font-weight: bold;
-                font-size: 18px;
-                transition: color 0.3s;
-            }
-            nav a:hover {
-                color: #d35400;
-            }
-            .container {
-                max-width: 800px;
-                margin: auto;
-                background: white;
-                padding: 30px;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            }
-            h1 {
-                color: #ff6600;
-                font-size: 32px;
-            }
-            p {
-                font-size: 18px;
-                line-height: 1.6;
-            }
-            .highlight {
-                font-weight: bold;
-                color: #d35400;
-            }
-            .quote {
-                font-style: italic;
-                font-size: 20px;
-                margin-top: 20px;
-                color: #777;
-            }
-            footer {
-                margin-top: 30px;
-                padding: 15px;
-                background-color: #333;
-                color: white;
-                font-size: 14px;
-            }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Colors */
+:root {
+  --primary-green: #365533;
+  --accent-orange: #e4c59e;
+  --light-bg: #fff8f0;
+  --hover-bg: #fdf5e6;
+  --white: #ffffff;
+  --text-dark: #333;
+}
+
+/* Header Banner */
+.header {
+  background: var(--primary-green) url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+  color: var(--white);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Headings */
+h2 {
+  color: var(--primary-green);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-left: 6px solid var(--accent-orange);
+  padding-left: 10px;
+}
+
+h3 {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--accent-orange);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--white);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  background-color: var(--hover-bg);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-orange);
+  color: var(--primary-green);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+/* Divider */
+.footer-divider {
+  height: 2px;
+  background-color: var(--accent-orange);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer h3 {
+  font-size: 1.2rem;
+}
