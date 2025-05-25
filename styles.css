@@ -29,31 +29,7 @@ body {
         padding: 3rem 0;
     }
 
-    /* Adjust overlap for smaller screens if necessary */
-    .image-overlap-left-bottom {
-        bottom: -5%;
-        left: -5%;
-        width: 45%; /* Make smaller on mobile */
-    }
-
-    .image-overlap-right-top {
-        top: -5%;
-        right: -5%;
-        width: 45%; /* Make smaller on mobile */
-    }
-
-    /* Ensure images and text stack nicely on smaller screens */
-    .container.grid-cols-1.md:grid-cols-2 {
-        grid-template-columns: 1fr; /* Stack columns */
-        gap: 3rem; /* Adjust gap for stacking */
-    }
-
-    .container .md\:order-1, .container .md\:order-2 {
-        order: unset; /* Remove order on mobile to maintain natural flow */
-    }
-
-            
-            
+                
 <!-- Contact -->
 body {
             font-family: 'Inter', sans-serif;
