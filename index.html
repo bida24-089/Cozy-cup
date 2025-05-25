@@ -1,69 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />a\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarone Coffee</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">COZYCUP</div>
-      
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#our-story">Our Story</a>
-        <a href="#">Locations</a>
-        <a href="#">Contact</a>
-        <a href="#">Order Now</a>
-      
-    </nav>
-    <section class="hero">
-      <h1>Savour Sunshine with Coffee and Pastries</h1>
-      <div class="hero-buttons">
-        <a href="#our-story" class="btn round">About Us</a>
-        <a href="#menu-section" class="btn round">Explore Menu</a>
-      </div>
-    </section>
-  </header>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F5EF;
+}
 
-  <main>
-    <section id="our-story" class="section-container">
-      <h2>Our Story</h2>
-      <div class="content-box reverse">
-        <div class="text-box">
-          <p>
-            At Sarone Coffee, we believe in the warmth of a great cup of coffee
-            shared with good company. From humble beginnings, our passion has
-            brewed into a cozy space for community, creativity, and comfort.
-          </p>
-        </div>
-        <div class="image-box">
-          <img src="coffee-shop.jpg" alt="Our Cafe" />
-        </div>
-      </div>
-    </section>
+/* Hero background */
+.tagline-background {
+    background-image: url('https://placehold.co/1920x800/D4C1AD/333333?text=Savour+Sunshine+Background');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    <section id="menu-section" class="section-container">
-      <h2>What We Have</h2>
-      <div class="content-box">
-        <div class="image-box dual">
-          <div class="menu-box">Coffee</div>
-          <div class="menu-box">Pastries</div>
-        </div>
-        <div class="text-box">
-          <p>
-            Explore our delightful menu featuring freshly brewed coffee,
-            handcrafted pastries, and other heartwarming treats designed to
-            brighten your day.
-          </p>
-        </div>
-      </div>
-      <div class="center-button">
-        <a href="menu.html" class="btn round">Explore Menu</a>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+/* Responsive image fix */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reusable styles */
+.nav-link {
+    text-decoration: none;
+    color: #4B5563;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #92400e;
+}
+
+.item-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-img {
+    margin: 0 auto 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.item-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1F2937;
+}
+
+.item-text {
+    font-size: 1.125rem;
+    color: #4B5563;
+    line-height: 1.75;
+}
+
+.menu-button {
+    display: inline-block;
+    background-color: #D97706;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #B45309;
+    transform: scale(1.05);
+}
+
+.visit-button {
+    background-color: #1F2937;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.visit-button:hover {
+    background-color: #111827;
+    transform: scale(1.05);
+}
+
+.form-label {
+    display: block;
+    color: #4B5563;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: #374151;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+}
