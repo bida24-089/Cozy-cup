@@ -21,6 +21,256 @@ body {
         .border-dark-green {
             border-color: #2E473D;
         }
+
+<!-- Contact -->
+
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5EE; /* Light beige background */
+            color: #2E473D; /* Dark green for default text */
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #2E473D; /* Dark green for headings */
+            margin-bottom: 1rem;
+        }
+
+        /* Header Styling (for the main navigation header) */
+        header {
+            background-color: #2E473D; /* Dark green */
+            color: #F8F5EE; /* Light beige for text */
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #F8F5EE; /* Ensure header title is light beige */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header nav {
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            color: #F8F5EE;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+            padding: 0.5rem 0;
+        }
+
+        header nav a:hover {
+            color: #D4B28C; /* Light brown/tan on hover */
+        }
+
+        /* Hero Section for "Get in Touch" */
+        .header { /* This targets the div with class "header" for the page title */
+            background-color: #D4B28C; /* Light brown/tan background */
+            color: #2E473D; /* Dark green text */
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            color: #2E473D; /* Ensure title is dark green */
+            margin-bottom: 0;
+        }
+
+        /* Main Section Container for Contact Info and Form */
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for content */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem auto; /* Center the section and add bottom margin */
+            padding: 0 1rem; /* Add horizontal padding */
+        }
+
+        /* Styling for individual contact info boxes */
+        .contact-info {
+            background-color: #FFFFFF; /* White background for info boxes */
+            padding: 2rem;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align text to the left within the box */
+            text-align: left; /* Ensure text alignment */
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-info h2::after {
+            content: '';
+            display: block;
+            width: 80%; /* Shorter underline for subheadings */
+            height: 3px;
+            background-color: #D4B28C;
+            margin: 0.5rem 0 0;
+            border-radius: 2px;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        .contact-info p strong {
+            color: #2E473D; /* Dark green for strong text like labels */
+        }
+
+        /* Styling for the contact form container */
+        form {
+            background-color: #FFFFFF; /* White background for the form */
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            grid-column: 1 / -1; /* Make form span full width on grid */
+            max-width: 700px; /* Limit form width */
+            margin: 0 auto; /* Center the form */
+        }
+
+        form h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2E473D;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #D4B28C; /* Light brown border */
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #2E473D;
+            background-color: #F8F5EE; /* Light beige background */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2E473D; /* Dark green on focus */
+            box-shadow: 0 0 0 3px rgba(46, 71, 61, 0.2); /* Subtle shadow on focus */
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 120px;
+        }
+
+        .btn {
+            background-color: #D4B28C; /* Light brown/tan button */
+            color: #2E473D; /* Dark green text */
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px; /* Fully rounded button */
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            align-self: center; /* Center the button in the form */
+            text-decoration: none; /* Ensure no underline if it's an anchor */
+        }
+
+        .btn:hover {
+            background-color: #2E473D; /* Dark green on hover */
+            color: #F8F5EE; /* Light beige text on hover */
+            transform: translateY(-2px);
+        }
+
+        /* Footer Divider */
+        .footer-divider {
+            height: 1px;
+            background-color: rgba(46, 71, 61, 0.2); /* Light transparent dark green */
+            max-width: 1000px;
+            margin: 3rem auto 1.5rem auto; /* Center with vertical spacing */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #F8F5EE; /* Light beige background for footer */
+            color: #2E473D; /* Dark green for footer text */
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                grid-template-columns: 1fr; /* Stack items on small screens */
+                padding: 0 1.5rem;
+            }
+
+            .contact-info, form {
+                padding: 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.75rem;
+            }
+
+            form h2 {
+                font-size: 1.75rem;
+            }
+
+                    
         .btn-primary {
             @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
             background-color: #D4B28C;
