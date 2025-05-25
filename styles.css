@@ -16,42 +16,52 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
-.navbar {
-  background-color: #365533;
-  color: white;
+/* Fixed Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #365533; /* Café green */
   padding: 15px 20px;
-}
-
-.navbar .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: auto;
+  justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
+  border-bottom: 4px solid #e4c59e; /* Café orange accent */
+  z-index: 999; /* Ensure it stays on top */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Add padding to body so content isn't hidden behind nav */
+body {
+  padding-top: 80px; /* Adjust this if you change nav height */
 }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .nav-links a {
-  color: white;
+/* Navigation Links */
+nav a {
+  color: #fff8f0; /* Cream text */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border-radius: 5px;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
-  color: #e4c59e;
+/* Hover & Active */
+nav a:hover,
+nav a.active {
+  background-color: #e4c59e;
+  color: #365533;
+}
+
+/* Responsive on small screens */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
