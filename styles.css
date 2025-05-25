@@ -1,92 +1,240 @@
-/* --- Existing styles above remain unchanged --- */
+<!-- index -->
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5EE; /* Light beige background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-dark-green {
+            background-color: #2E473D; /* Dark green from the image */
+        }
+        .text-light-beige {
+            color: #F8F5EE; /* Light beige for text on dark background */
+        }
+        .text-dark-green {
+            color: #2E473D;
+        }
+        .bg-light-brown {
+            background-color: #D4B28C; /* Light brown/tan from the image */
+        }
+        .border-dark-green {
+            border-color: #2E473D;
+        }
+        .btn-primary {
+            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
+            background-color: #D4B28C;
+            color: #2E473D;
+            border: 2px solid #D4B28C;
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #D4B28C;
+            border-color: #D4B28C;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
+            background-color: transparent;
+            color: #F8F5EE;
+            border: 2px solid #F8F5EE;
+        }
+        .btn-secondary:hover {
+            background-color: #F8F5EE;
+            color: #2E473D;
+        }
+        .section-padding {
+            padding: 4rem 0; /* Consistent vertical padding for sections */
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .image-overlap-left {
+            position: relative;
+            z-index: 10;
+            margin-left: -5%; /* Adjust as needed for overlap */
+            margin-top: -5%;
+        }
+        .image-overlap-right {
+            position: relative;
+            z-index: 10;
+            margin-right: -5%; /* Adjust as needed for overlap */
+            margin-top: -5%;
+        }  
 
-/* Menu section container: holds coffee and pastries side by side */
-.menu {
-  max-width: 900px;
-  margin: 40px auto;
-  display: flex;
-  gap: 30px;
-  padding: 20px;
-  background-color: #fff3e6;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(111, 78, 55, 0.2);
-  color: #4b3b2b;
-}
 
-/* Coffee and Pastries boxes */
-.menu .coffee,
-.menu .pastries {
-  flex: 1; /* equal width */
-  background-color: #f7e9d7;
-  border-radius: 10px;
-  padding: 25px 20px;
-  box-shadow: 0 0 8px rgba(111, 78, 55, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+<!-- menu -->
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5EE; /* Light beige background from General Store */
+            color: #2E473D; /* Dark green for default text */
+            margin: 0;
+            line-height: 1.6;
+        }
 
-.menu .coffee h3,
-.menu .pastries h3 {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #2E473D; /* Dark green for headings */
+            margin-bottom: 1rem;
+        }
 
-/* Contact section container */
-.contact {
-  max-width: 900px;
-  margin: 40px auto;
-  background-color: #fff3e6;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(111, 78, 55, 0.25);
-  padding: 30px 25px;
-  color: #4b3b2b;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+        /* Header Styling */
+        header {
+            background-color: #2E473D; /* Dark green from General Store */
+            color: #F8F5EE; /* Light beige for text */
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-/* Individual contact subsections */
-.contact .contact-section {
-  flex: 1 1 45%;
-  background-color: #f7e9d7;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(111, 78, 55, 0.15);
-}
+        header h1 {
+            color: #F8F5EE; /* Ensure header title is light beige */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-.contact .contact-section h4 {
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
+        header nav {
+            margin-top: 1rem;
+        }
 
-.contact .contact-section p,
-.contact .contact-section a {
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #4b3b2b;
-  text-decoration: none;
-}
+        header nav a {
+            color: #F8F5EE;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+            padding: 0.5rem 0;
+            position: relative; /* For underline effect */
+        }
 
-/* Responsive tweaks for menu and contact */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
+        header nav a:hover {
+            color: #D4B28C; /* Light brown/tan on hover */
+        }
 
-  .menu .coffee,
-  .menu .pastries {
-    width: 100%;
-  }
+        /* Main Content Area */
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-  .contact {
-    flex-direction: column;
-  }
+        /* Section Styling */
+        .menu-section {
+            background-color: #FFFFFF; /* White background for sections */
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Custom shadow */
+            text-align: center;
+        }
 
-  .contact .contact-section {
-    flex: 1 1 100%;
-  }
-}
+        .menu-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block; /* To center the pseudo-element */
+        }
+
+        /* Underline effect for section titles */
+        .menu-section h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background-color: #D4B28C; /* Light brown/tan underline */
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Menu Row Layout */
+        .menu-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        /* Menu Item Styling */
+        .menu-item {
+            background-color: #F8F5EE; /* Light beige for menu items */
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .menu-item img {
+            width: 100%;
+            max-width: 200px; /* Limit image size */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            object-fit: cover; /* Ensure images cover the area without distortion */
+            aspect-ratio: 1 / 1; /* Maintain square aspect ratio for images */
+            border: 3px solid #D4B28C; /* Light brown border for images */
+        }
+
+        .menu-item h3 {
+            font-size: 1.75rem;
+            color: #2E473D;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 0.75rem;
+        }
+
+        .menu-item p strong {
+            font-size: 1.25rem;
+            color: #D4B28C; /* Light brown/tan for prices */
+            font-weight: 700;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #D4B28C; /* Light brown/tan from General Store */
+            color: #2E473D; /* Dark green for footer text */
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .menu-section {
+                padding: 2rem;
+            }
+
+            .menu-section h2 {
+                font-size: 2rem;
+            }
+
+            .menu-row {
+                grid-template-columns: 1fr; /* Stack items on small screens */
+            }
+
+            .menu-item img {
+                max-width: 150px;
+            }
+        }
