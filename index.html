@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>COZY CUP</title>
+  <meta charset="UTF-8" />a\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarone Coffee</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="container">
-    <h1>COZY CUP</h1>
-    <p>Savour Sunshine with Coffee and Pastries</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-      <a href="feedback.html">Feedback</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">COZYCUP</div>
+      
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#">Locations</a>
+        <a href="#">Contact</a>
+        <a href="#">Order Now</a>
+      
     </nav>
+    <section class="hero">
+      <h1>Savour Sunshine with Coffee and Pastries</h1>
+      <div class="hero-buttons">
+        <a href="#our-story" class="btn round">About Us</a>
+        <a href="#menu-section" class="btn round">Explore Menu</a>
+      </div>
+    </section>
   </header>
-<section class="section">
-  <div class="container">
-    <h2>ABOUT US</h2>
-    <div class="flex-container">
-      <div class="box text-container">
-        <p>At General Store, we believe in community, quality, and comfort. Our team is dedicated to serving the best brews and bakes in a cozy, welcoming space where everyone feels at home.</p>
-      </div>
-      <div class="box image-container">
-        <img src="images/about_us.jpg" alt="Team or café exterior" />
-      </div>
-    </div>
-    <a href="about.html"><button class="round-button">Meet the Team</button></a>
-  </div>
-</section>
 
- 
-  <section class="section">
-    <div class="container">
-      <h2>OUR STORY</h2>
-      <div class="flex-container">
-        <div class="text-container">
-          <p>Welcome to General Store, where every cup tells a story. Our passion is to bring warmth and joy through freshly brewed coffee and handmade pastries crafted with love and care.</p>
+  <main>
+    <section id="our-story" class="section-container">
+      <h2>Our Story</h2>
+      <div class="content-box reverse">
+        <div class="text-box">
+          <p>
+            At Sarone Coffee, we believe in the warmth of a great cup of coffee
+            shared with good company. From humble beginnings, our passion has
+            brewed into a cozy space for community, creativity, and comfort.
+          </p>
         </div>
-        <div class="image-container">
-          <img src="images/cafe_story.jpg" alt="Cafe interior" />
+        <div class="image-box">
+          <img src="coffee-shop.jpg" alt="Our Cafe" />
         </div>
       </div>
-      <a href="about.html"><button>Learn More</button></a>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>WHAT WE HAVE</h2>
-      <div class="flex-container">
-        <div class="text-container">
-          <p>Explore our delightful menu of classic coffees, unique brews, and fresh pastries. There’s something for every mood and moment.</p>
+    <section id="menu-section" class="section-container">
+      <h2>What We Have</h2>
+      <div class="content-box">
+        <div class="image-box dual">
+          <div class="menu-box">Coffee</div>
+          <div class="menu-box">Pastries</div>
         </div>
-        <div class="image-container">
-          <img src="images/menu_preview.jpg" alt="Pastries and coffee" />
+        <div class="text-box">
+          <p>
+            Explore our delightful menu featuring freshly brewed coffee,
+            handcrafted pastries, and other heartwarming treats designed to
+            brighten your day.
+          </p>
         </div>
       </div>
-      <a href="menu.html"><button>View Menu</button></a>
-    </div>
-  </section>
+      <div class="center-button">
+        <a href="menu.html" class="btn round">Explore Menu</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
