@@ -1,543 +1,89 @@
-<!-- index -->
-/* style.css */
-
+/* styles.css */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F5DC; /* Light cream background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f0e6;
+  color: #333;
 }
 
-.bg-coffee-beans {
-    background-image: url('https://placehold.co/1920x1080/6F4E37/FFFFFF?text=Coffee+Beans+Background'); /* Placeholder for coffee beans background */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+header {
+  background-color: #2e4e3f;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.section-bg-dark-green {
-    background-color: #2E4A3E; /* Dark green from the image */
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
 }
 
-.section-bg-light-green {
-    background-color: #4A6E5C; /* Lighter green from the image */
+.section {
+  padding: 40px 20px;
 }
 
-.text-cream {
-    color: #F5F5DC; /* Light cream text */
+.text-container, .image-container, .container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
 }
 
-.btn-primary {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding-left: 1.5rem; /* px-6 */
-    padding-right: 1.5rem; /* px-6 */
-    padding-top: 0.75rem; /* py-3 */
-    padding-bottom: 0.75rem; /* py-3 */
-    border-radius: 9999px; /* rounded-full */
-    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.btn-primary:hover {
-    background-color: white;
-    color: #2E4A3E; /* dark-green */
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.btn-secondary {
-    background-color: white;
-    color: #2E4A3E; /* dark-green */
-    padding-left: 1.5rem; /* px-6 */
-    padding-right: 1.5rem; /* px-6 */
-    padding-top: 0.75rem; /* py-3 */
-    padding-bottom: 0.75rem; /* py-3 */
-    border-radius: 9999px; /* rounded-full */
-    transition: background-color 300ms ease-in-out;
+button {
+  display: block;
+  margin: 20px auto;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.btn-secondary:hover {
-    background-color: #E5E7EB; /* gray-200 */
+button:hover {
+  background-color: #8c6239;
 }
 
-
-
-ing {
-        padding: 3rem 0;
-    }/* Responsive adjustments for the image sections */
-@media (max-width: 768px) {
-    .section-padd
-
-                
-<!-- Contact -->
-body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F5EE; /* Light beige background */
-            color: #2E473D; /* Dark green for default text */
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: #2E473D; /* Dark green for headings */
-            margin-bottom: 1rem;
-        }
-
-        /* Header Styling (for the main navigation header) */
-        header {
-            background-color: #2E473D; /* Dark green */
-            color: #F8F5EE; /* Light beige for text */
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            color: #F8F5EE; /* Ensure header title is light beige */
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        header nav {
-            margin-top: 1rem;
-        }
-
-        header nav a {
-            color: #F8F5EE;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out;
-            padding: 0.5rem 0;
-        }
-
-        header nav a:hover {
-            color: #D4B28C; /* Light brown/tan on hover */
-        }
-
-        /* Hero Section for "Get in Touch" */
-        .header { /* This targets the div with class "header" for the page title */
-            background-color: #D4B28C; /* Light brown/tan background */
-            color: #2E473D; /* Dark green text */
-            padding: 4rem 1rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            color: #2E473D; /* Ensure title is dark green */
-            margin-bottom: 0;
-        }
-
-        /* Main Section Container for Contact Info and Form */
-        section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for content */
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto 3rem auto; /* Center the section and add bottom margin */
-            padding: 0 1rem; /* Add horizontal padding */
-        }
-
-        /* Styling for individual contact info boxes */
-        .contact-info {
-            background-color: #FFFFFF; /* White background for info boxes */
-            padding: 2rem;
-            border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Consistent shadow */
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Align text to the left within the box */
-            text-align: left; /* Ensure text alignment */
-        }
-
-        .contact-info h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .contact-info h2::after {
-            content: '';
-            display: block;
-            width: 80%; /* Shorter underline for subheadings */
-            height: 3px;
-            background-color: #D4B28C;
-            margin: 0.5rem 0 0;
-            border-radius: 2px;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.8rem;
-            color: #555;
-        }
-
-        .contact-info p strong {
-            color: #2E473D; /* Dark green for strong text like labels */
-        }
-
-        /* Styling for the contact form container */
-        form {
-            background-color: #FFFFFF; /* White background for the form */
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            grid-column: 1 / -1; /* Make form span full width on grid */
-            max-width: 700px; /* Limit form width */
-            margin: 0 auto; /* Center the form */
-        }
-
-        form h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #2E473D;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #D4B28C; /* Light brown border */
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: #2E473D;
-            background-color: #F8F5EE; /* Light beige background */
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2E473D; /* Dark green on focus */
-            box-shadow: 0 0 0 3px rgba(46, 71, 61, 0.2); /* Subtle shadow on focus */
-        }
-
-        .form-group textarea {
-            resize: vertical; /* Allow vertical resizing */
-            min-height: 120px;
-        }
-
-        .btn {
-            background-color: #D4B28C; /* Light brown/tan button */
-            color: #2E473D; /* Dark green text */
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px; /* Fully rounded button */
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            align-self: center; /* Center the button in the form */
-            text-decoration: none; /* Ensure no underline if it's an anchor */
-        }
-
-        .btn:hover {
-            background-color: #2E473D; /* Dark green on hover */
-            color: #F8F5EE; /* Light beige text on hover */
-            transform: translateY(-2px);
-        }
-
-        /* Footer Divider */
-        .footer-divider {
-            height: 1px;
-            background-color: rgba(46, 71, 61, 0.2); /* Light transparent dark green */
-            max-width: 1000px;
-            margin: 3rem auto 1.5rem auto; /* Center with vertical spacing */
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #F8F5EE; /* Light beige background for footer */
-            color: #2E473D; /* Dark green for footer text */
-            text-align: center;
-            padding: 2rem 1rem;
-            font-size: 0.9rem;
-        }
-
-        footer h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            section {
-                grid-template-columns: 1fr; /* Stack items on small screens */
-                padding: 0 1.5rem;
-            }
-
-            .contact-info, form {
-                padding: 1.5rem;
-            }
-
-            .contact-info h2 {
-                font-size: 1.75rem;
-            }
-
-            form h2 {
-                font-size: 1.75rem;
-            }
-
-                    
-        .btn-primary {
-            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
-            background-color: #D4B28C;
-            color: #2E473D;
-            border: 2px solid #D4B28C;
-        }
-        .btn-primary:hover {
-            background-color: transparent;
-            color: #D4B28C;
-            border-color: #D4B28C;
-        }
-        .btn-secondary {
-            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
-            background-color: transparent;
-            color: #F8F5EE;
-            border: 2px solid #F8F5EE;
-        }
-        .btn-secondary:hover {
-            background-color: #F8F5EE;
-            color: #2E473D;
-        }
-        .section-padding {
-            padding: 4rem 0; /* Consistent vertical padding for sections */
-        }
-        .shadow-custom {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .image-overlap-left {
-            position: relative;
-            z-index: 10;
-            margin-left: -5%; /* Adjust as needed for overlap */
-            margin-top: -5%;
-        }
-        .image-overlap-right {
-            position: relative;
-            z-index: 10;
-            margin-right: -5%; /* Adjust as needed for overlap */
-            margin-top: -5%;
-        }  
-
-
-<!-- menu -->
- body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F5EE; /* Light beige background from General Store */
-            color: #2E473D; /* Dark green for default text */
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: #2E473D; /* Dark green for headings */
-            margin-bottom: 1rem;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #2E473D; /* Dark green from General Store */
-            color: #F8F5EE; /* Light beige for text */
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            color: #F8F5EE; /* Ensure header title is light beige */
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        header nav {
-            margin-top: 1rem;
-        }
-
-        header nav a {
-            color: #F8F5EE;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out;
-            padding: 0.5rem 0;
-            position: relative; /* For underline effect */
-        }
-
-        header nav a:hover {
-            color: #D4B28C; /* Light brown/tan on hover */
-        }
-
-        /* Main Content Area */
-        main {
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Section Styling */
-        .menu-section {
-            background-color: #FFFFFF; /* White background for sections */
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Custom shadow */
-            text-align: center;
-           
-          
-        
-
-        .menu-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-            display: inline-block; /* To center the pseudo-element */
-        }
-
-        /* Underline effect for section titles */
-        .menu-section h2::after {
-            content: '';
-            display: block;
-            width: 60%;
-            height: 3px;
-            background-color: #D4B28C; /* Light brown/tan underline */
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
-        }
-
-        /* Menu Row Layout */
-        .menu-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        /* Menu Item Styling */
-        .menu-item {
-            background-color: #F8F5EE; /* Light beige for menu items */
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .menu-item img {
-            width: 100%;
-            max-width: 200px; /* Limit image size */
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            object-fit: cover; /* Ensure images cover the area without distortion */
-            aspect-ratio: 1 / 1; /* Maintain square aspect ratio for images */
-            border: 3px solid #D4B28C; /* Light brown border for images */
-        }
-
-        .menu-item h3 {
-            font-size: 1.75rem;
-            color: #2E473D;
-            margin-bottom: 0.5rem;
-        }
-
-        .menu-item p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 0.75rem;
-        }
-
-        .menu-item p strong {
-            font-size: 1.25rem;
-            color: #D4B28C; /* Light brown/tan for prices */
-            font-weight: 700;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #D4B28C; /* Light brown/tan from General Store */
-            color: #2E473D; /* Dark green for footer text */
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            .menu-section {
-                padding: 2rem;
-            }
-
-            .menu-section h2 {
-                font-size: 2rem;
-            }
-
-            .menu-row {
-                grid-template-columns: 1fr; /* Stack items on small screens */
-            }
-
-            .menu-item img {
-                max-width: 150px;
-            }
-        }
-
-
- position: fixed; /* Makes the header stay in place when scrolling */
-    top: 0;          /* Aligns it to the top of the viewport */
-    left: 0;         /* Aligns it to the left of the viewport */
-    width: 100%;     /* Makes it span the full width of the viewport */
-    z-index: 1000;   /* Ensures it stays on top of other content */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
