@@ -1,5 +1,5 @@
 <!-- index -->
-body {
+ body {
             font-family: 'Inter', sans-serif;
             background-color: #F8F5EE; /* Light beige background */
         }
@@ -21,13 +21,52 @@ body {
         .border-dark-green {
             border-color: #2E473D;
         }
+        .btn-primary {
+            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
+            background-color: #D4B28C;
+            color: #2E473D;
+            border: 2px solid #D4B28C;
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #D4B28C;
+            border-color: #D4B28C;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
+            background-color: transparent;
+            color: #F8F5EE;
+            border: 2px solid #F8F5EE;
+        }
+        .btn-secondary:hover {
+            background-color: #F8F5EE;
+            color: #2E473D;
+        }
+        .section-padding {
+            padding: 4rem 0; /* Consistent vertical padding for sections */
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .image-overlap-left {
+            position: relative;
+            z-index: 10;
+            margin-left: -5%; /* Adjust as needed for overlap */
+            margin-top: -5%;
+        }
+        .image-overlap-right {
+            position: relative;
+            z-index: 10;
+            margin-right: -5%; /* Adjust as needed for overlap */
+            margin-top: -5%;
+        }
 
 
-/* Responsive adjustments for the image sections */
-@media (max-width: 768px) {
-    .section-padding {
+ing {
         padding: 3rem 0;
-    }
+    }/* Responsive adjustments for the image sections */
+@media (max-width: 768px) {
+    .section-padd
 
                 
 <!-- Contact -->
