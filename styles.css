@@ -29,6 +29,16 @@ nav a {
   padding: 20px;
   max-width: 800px;
 }
+/* Section spacing and alignment */
+.section {
+  padding: 40px 20px;
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .flex-container {
   display: flex;
