@@ -1,65 +1,62 @@
 <!-- index -->
- body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F5EE; /* Light beige background */
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .bg-dark-green {
-            background-color: #2E473D; /* Dark green from the image */
-        }
-        .text-light-beige {
-            color: #F8F5EE; /* Light beige for text on dark background */
-        }
-        .text-dark-green {
-            color: #2E473D;
-        }
-        .bg-light-brown {
-            background-color: #D4B28C; /* Light brown/tan from the image */
-        }
-        .border-dark-green {
-            border-color: #2E473D;
-        }
-        .btn-primary {
-            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
-            background-color: #D4B28C;
-            color: #2E473D;
-            border: 2px solid #D4B28C;
-        }
-        .btn-primary:hover {
-            background-color: transparent;
-            color: #D4B28C;
-            border-color: #D4B28C;
-        }
-        .btn-secondary {
-            @apply px-6 py-3 rounded-full font-semibold transition duration-300 ease-in-out;
-            background-color: transparent;
-            color: #F8F5EE;
-            border: 2px solid #F8F5EE;
-        }
-        .btn-secondary:hover {
-            background-color: #F8F5EE;
-            color: #2E473D;
-        }
-        .section-padding {
-            padding: 4rem 0; /* Consistent vertical padding for sections */
-        }
-        .shadow-custom {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .image-overlap-left {
-            position: relative;
-            z-index: 10;
-            margin-left: -5%; /* Adjust as needed for overlap */
-            margin-top: -5%;
-        }
-        .image-overlap-right {
-            position: relative;
-            z-index: 10;
-            margin-right: -5%; /* Adjust as needed for overlap */
-            margin-top: -5%;
-        }
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5DC; /* Light cream background */
+}
+
+.bg-coffee-beans {
+    background-image: url('https://placehold.co/1920x1080/6F4E37/FFFFFF?text=Coffee+Beans+Background'); /* Placeholder for coffee beans background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section-bg-dark-green {
+    background-color: #2E4A3E; /* Dark green from the image */
+}
+
+.section-bg-light-green {
+    background-color: #4A6E5C; /* Lighter green from the image */
+}
+
+.text-cream {
+    color: #F5F5DC; /* Light cream text */
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem; /* py-3 */
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #2E4A3E; /* dark-green */
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #2E4A3E; /* dark-green */
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem; /* py-3 */
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 300ms ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #E5E7EB; /* gray-200 */
+}
+
 
 
 ing {
