@@ -21,24 +21,7 @@ body {
         .border-dark-green {
             border-color: #2E473D;
         }
-.section-padding {
-    padding: 4rem 0; /* Consistent vertical padding for sections */
-}
 
-/* Specific overlap adjustments for images */
-.image-overlap-left-bottom {
-    position: absolute;
-    bottom: -10%; /* Adjust as needed for overlap */
-    left: -10%;  /* Adjust as needed for overlap */
-    /* Ensure it's visually above the main image */
-}
-
-.image-overlap-right-top {
-    position: absolute;
-    top: -10%;   /* Adjust as needed for overlap */
-    right: -10%; /* Adjust as needed for overlap */
-    /* Ensure it's visually above the main image */
-}
 
 /* Responsive adjustments for the image sections */
 @media (max-width: 768px) {
