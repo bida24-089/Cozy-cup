@@ -3,60 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Cozy Cup Coffee Shop</title>
+    <title>General Store Coffee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Welcome to Cozy Cup Coffee Shop!</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="Contact.html">Contact</a>
-            <a href="feedback.html">Feedback</a>
-        </nav>
-  <div class="header">
-    <h1>Savour the Sunshine with Coffee and Pastries</h1>
-  </div>
+<body class="text-gray-800">
 
-  <div class="checkered"></div>
+    <header class="bg-coffee-beans min-h-screen flex flex-col justify-center items-center text-center p-4 relative">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 flex flex-col items-center">
+            <nav class="absolute top-0 w-full flex justify-center py-4">
+                <ul class="flex space-x-8 text-cream text-lg font-medium">
+                    <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">About</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Menu</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mt-20 border-2 border-cream p-8 rounded-xl bg-dark-green bg-opacity-70">
+                <p class="text-cream text-sm mb-2">ESTD <span class="mx-2">•</span> 2011</p>
+                <h1 class="text-cream text-6xl md:text-8xl font-bold mb-4 tracking-wide">General Store</h1>
+                <p class="text-cream text-xl italic">At the heart</p>
+            </div>
+        </div>
+    </header>
 
-  <section class="about">
-    <div class="text-block">
-      <h2>Our Story</h2>
-      <p>Born from a love of fresh bakes and slow mornings, General Store Café is where the community meets comfort. Since opening in 2014, we’ve been pouring perfect cups and offering oven-fresh pastries daily. It’s more than coffee — it’s a moment of calm in your day.</p>
-      <a href="about.html" class="btn">About Us</a>
-    </div>
-    <img src="pics.png" alt="pics.png" width="500" height="300">
-  </section>
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-white flex flex-col md:flex-row items-center justify-center gap-8">
+        <div class="md:w-1/2 lg:w-1/3 text-center md:text-left">
+            <h2 class="text-4xl font-semibold mb-4 text-dark-green">About Us</h2>
+            <p class="text-lg mb-4">Visit our storefront!</p>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <button class="btn-secondary">About Us</button>
+        </div>
+        <div class="md:w-1/2 lg:w-2/5 flex flex-wrap justify-center gap-4">
+            <img src="https://placehold.co/300x200/F5F5DC/2E4A3E?text=Coffee+Shop+Interior" alt="Coffee Shop Interior" class="w-full md:w-5/12 rounded-lg shadow-lg">
+            <img src="https://placehold.co/200x150/F5F5DC/2E4A3E?text=General+Store+Bag" alt="General Store Bag" class="w-5/12 md:w-auto rounded-lg shadow-lg">
+            <img src="https://placehold.co/250x180/F5F5DC/2E4A3E?text=Sandwich+Display" alt="Sandwich Display" class="w-full md:w-6/12 rounded-lg shadow-lg">
+        </div>
+    </section>
 
-  <div class="checkered"></div>
+    <section class="section-bg-light-green py-16 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-center gap-8 text-cream">
+        <div class="md:w-1/2 lg:w-2/5 flex flex-wrap justify-center gap-4">
+            <img src="https://placehold.co/300x200/F5F5DC/2E4A3E?text=Barista+Making+Coffee" alt="Barista Making Coffee" class="w-full md:w-5/12 rounded-lg shadow-lg">
+            <img src="https://placehold.co/200x150/F5F5DC/2E4A3E?text=Coffee+Cup" alt="Coffee Cup" class="w-5/12 md:w-auto rounded-lg shadow-lg">
+            <img src="https://placehold.co/250x180/F5F5DC/2E4A3E?text=Jar+Product" alt="Jar Product" class="w-full md:w-6/12 rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 lg:w-1/3 text-center md:text-left">
+            <h2 class="text-4xl font-semibold mb-4">View Our Menu</h2>
+            <p class="text-lg mb-6">Explore our delicious offerings.</p>
+            <button class="btn-primary">View Our Menu</button>
+        </div>
+    </section>
 
-  <div class="menu-cta">
-    <h2>What We Have</h2>
-    <p>From rich espressos to buttery croissants, our curated menu has something for every craving. Taste the comfort, discover your new favorite.</p>
-    <a href="menu.html" class="btn">Explore Menu</a>
-  </div>
+    <section class="section-bg-dark-green py-16 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-center gap-8 text-cream">
+        <div class="md:w-1/2 lg:w-1/3 text-center md:text-left">
+            <h2 class="text-4xl font-semibold mb-4">Our Mission & Team</h2>
+            <p class="text-lg mb-6">Get to know us!</p>
+            <button class="btn-primary">About Us</button>
+        </div>
+        <div class="md:w-1/2 lg:w-2/5 flex flex-wrap justify-center gap-4">
+            <img src="https://placehold.co/300x200/F5F5DC/2E4A3E?text=Team+Member+1" alt="Team Member 1" class="w-full md:w-5/12 rounded-lg shadow-lg">
+            <img src="https://placehold.co/200x150/F5F5DC/2E4A3E?text=Team+Member+2" alt="Team Member 2" class="w-5/12 md:w-auto rounded-lg shadow-lg">
+            <img src="https://placehold.co/250x180/F5F5DC/2E4A3E?text=Team+Member+3" alt="Team Member 3" class="w-full md:w-6/12 rounded-lg shadow-lg">
+        </div>
+    </section>
 
-  <div class="checkered"></div>
+    <footer class="section-bg-dark-green py-12 px-4 md:px-8 lg:px-16 text-cream text-center">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Address</h4>
+                <p>123 Coffee Lane</p>
+                <p>Bean Town, CA 90210</p>
+                <p>USA</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">General Store</h4>
+                <p>At the heart</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Menu</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-sm">
+            <p>&copy; 2023 General Store. All rights reserved.</p>
+            <p>A GENERAL STORE AT THE HEART CREATE CREDITS</p>
+        </div>
+    </footer>
 
-  <section class="mission">
-    <img src="https://images.unsplash.com/photo-1581092334514-8c6f0d8f0e2b" alt="Cafe interior">
-    <div class="text-block">
-      <h2>Savour the Sunshine</h2>
-      <p>At General Store Café, every cup is a celebration of warmth and community. From golden morning light spilling through our windows to the comforting aroma of fresh pastries and brewed coffee, we create a space where you can pause, connect, and savour the sunshine — one bite and sip at a time.</p>
-    </div>
-  </section>
-
-<div class="footer-divider"></div>
-
-  <footer>
-    <h3>General Store Café</h3>
-    <p>📍 123 Brew Street, Beanville &nbsp;|&nbsp; 📞 (123) 456-7890 &nbsp;|&nbsp; 📧 hello@generalstore.com</p>
-    <p>&copy; 2025 General Store. All rights reserved.</p>
-  </footer>
-
-    
 </body>
 </html>
