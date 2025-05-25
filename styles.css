@@ -64,7 +64,146 @@ body {
                 color: white;
                 font-size: 14px;
             }
-       body {
+      
+      {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header {
+      background: #365533 url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .checkered {
+      background: repeating-linear-gradient(
+        45deg,
+        #365533,
+        #365533 10px,
+        #fff8f0 10px,
+        #fff8f0 20px
+      );
+      height: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about,
+    .mission,
+    .sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img,
+    .mission img,
+    .sponsors img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .text-block {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    h2 {
+      color: #365533;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background-color: #365533;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2a4229;
+    }
+
+    .menu-cta {
+      text-align: center;
+      background-color: #e4c59e;
+      padding: 40px 20px;
+    }
+
+    .menu-cta h2 {
+      margin-bottom: 10px;
+    }
+
+    .sponsor-gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sponsor-gallery img {
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #365533;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer h3 {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .about,
+      .mission,
+      .sponsors {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+      
+      body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
