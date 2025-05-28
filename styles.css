@@ -410,6 +410,93 @@ section:last-child {
     font-size: 1em;
 }
 
+/* ------------------------------------------- */
+/* CSS ADDITIONS for Contact Page (contact-detail sections) */
+/* ------------------------------------------- */
+
+/* Layout for the container holding contact details */
+.contact-methods-section .form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for detail blocks */
+    gap: 20px; /* Space between the detail blocks */
+    padding: 30px; /* Padding for the container itself, making sure content has space */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width/height */
+}
+
+/* Styling for the introductory paragraph within the contact methods section */
+.contact-methods-section .form-container > p {
+    grid-column: 1 / -1; /* Makes this paragraph span across all grid columns */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #5a3e36; /* Dark brown, matching your theme */
+}
+
+/* Styling for each individual contact detail block */
+.contact-detail {
+    background-color: #f8f6f2; /* A slightly softer, distinct background color */
+    border: 1px solid #e7dcd3; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth animation on hover */
+}
+
+/* Hover effect for contact detail blocks */
+.contact-detail:hover {
+    transform: translateY(-3px); /* Lifts the box slightly when hovered */
+}
+
+/* Styling for the headings within each contact detail block (e.g., "Visit Us") */
+.contact-detail h3 {
+    font-family: 'Playfair Display', serif; /* Assumes Playfair Display is used for headings */
+    color: #5a3e36; /* Dark brown */
+    margin-top: 0;
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 1.6em; /* Prominent size */
+    border-bottom: 2px solid #d4a984; /* Accent color underline */
+    padding-bottom: 8px; /* Space between text and underline */
+    display: inline-block; /* Ensures underline only spans text width */
+    line-height: 1.2; /* Adjust line height for better appearance */
+}
+
+/* Styling for general paragraphs within contact detail blocks */
+.contact-detail p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555; /* Slightly softer text color for readability */
+    margin-bottom: 10px;
+}
+
+/* Styling for strong/bold text within contact detail paragraphs (e.g., "Phone:") */
+.contact-detail p strong {
+    color: #4a332a; /* Darker brown for emphasis */
+}
+
+/* Styling for links within contact detail blocks (e.g., "Get Directions") */
+.contact-detail a {
+    color: #d4a984; /* Accent color for links */
+    text-decoration: none; /* No underline by default */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for links within contact detail blocks */
+.contact-detail a:hover {
+    color: #c09672; /* Slightly darker accent on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* ------------------------------------------- */
+/* Responsive adjustments for the contact page */
+/* (Add these to your existing @media (max-width: 768px) block or create one) */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    .contact-methods-section .form-container {
+        grid-template-columns: 1fr; /* Stack contact details in a single column on small screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
 /* Footer */
 footer {
     background-color: #3b2a24; /* Darker, richer brown for footer */
