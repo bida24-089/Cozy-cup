@@ -1,139 +1,533 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Basic Reset & Body Styles */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff8f1;
-  color: #3c2f2f;
+    font-family: 'Lora', serif; /* Warmer serif font for body */
+    margin: 0;
+    line-height: 1.7; /* Slightly increased line-height for readability */
+    background-color: #fcf8f5; /* A very soft, warm off-white/cream */
+    /* Subtle background texture using a radial gradient for a paper/fabric feel */
+    background-image: radial-gradient(circle at top left, #fefefe, #fcf8f5);
+    color: #333;
+    padding-top: 60px; /* Space for the fixed nav bar */
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #6b4226;
-  color: #fff;
+/* Global Headers */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for titles */
+    color: #4a332a; /* Deeper, richer brown for titles */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em; /* Slightly more spacious for elegance */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+h1 {
+    font-size: 3em; /* Slightly larger */
+    padding: 25px 0;
+    font-weight: 700;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+h2 {
+    font-size: 2.4em; /* Slightly larger */
+    position: relative;
+    padding-bottom: 20px; /* More space for the underline effect */
+    font-weight: 600;
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 8px; /* Adjusted position */
+    transform: translateX(-50%);
+    width: 90px; /* Slightly wider */
+    height: 4px; /* Slightly thicker */
+    background-color: #d4a984; /* A slightly richer, warmer accent color */
+    border-radius: 2px; /* Soften the ends */
 }
+
+/* Header Section (for page title) */
+.page-header {
+    background-color: #5a3e36;
+    color: #fff;
+    padding: 25px 0; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Softer, more diffused shadow */
+    margin-bottom: 40px; /* More space below header */
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow */
+}
+
+
+/* Fixed Navigation Bar */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6d4f45; /* Slightly deeper brown for nav */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25); /* Softer shadow */
+    z-index: 1000;
+    text-align: center;
+    padding: 12px 0; /* Increased padding */
+}
+
+.fixed-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-nav ul li {
+    margin: 0 18px; /* Slightly more space */
+}
+
+.fixed-nav ul li a {
+    color: #fcf8f5; /* Use the warm off-white for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* Increased padding */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 1.05em; /* Slightly larger font */
+}
+
+.fixed-nav ul li a:hover {
+    background-color: #8c6a5d; /* Lighter on hover */
+    color: #fff; /* Ensure text remains bright */
+    border-radius: 6px;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1100px; /* Slightly narrower for coziness */
+    margin: 30px auto; /* More margin */
+    padding: 30px; /* More padding */
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* More pronounced, softer shadow */
+    border-radius: 12px; /* More rounded corners */
+}
+
+section {
+    margin-bottom: 50px; /* More space between sections */
+    padding: 25px; /* More padding */
+    border-bottom: 1px solid #f0e9e4; /* Softer separator */
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* --- Homepage Specific Styles --- */
 
 .hero {
-  background: url('coffee-hero.jpg') no-repeat center center/cover;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 2rem;
-  color: #fff;
+    background-color: #fefefb; /* A very light cream */
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.08); /* Stronger inner shadow */
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 5px #000;
+.hero p {
+    font-size: 1.15em; /* Larger text for hero */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* More space between columns */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-.btn {
-  padding: 0.8rem 1.5rem;
-  background-color: #d4a373;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.content-block .column {
+    flex: 1;
+    min-width: 320px;
+    padding: 30px; /* More padding */
+    background-color: #fcfcfc; /* Very light background */
+    border: 1px solid #f0e9e4; /* Softer border */
+    border-radius: 10px; /* More rounded */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Softer shadow */
 }
 
-.btn:hover {
-  background-color: #b57a50;
+.image-placeholder {
+    background-color: #e8e2de; /* Slightly warmer placeholder */
+    height: 280px; /* Taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c7e75; /* Warmer color for text */
+    font-weight: bold;
+    border: 2px dashed #bbaaa1; /* Thicker, warmer dashed border */
+    border-radius: 8px; /* More rounded */
+    font-size: 1.3em;
 }
 
-.round {
-  border-radius: 50px;
+.about-us .about-content, .exploration .exploration-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* More space */
+    padding: 25px;
 }
 
-.section-container {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: auto;
+.about-us .about-content p, .exploration .exploration-content p {
+    flex: 1;
+    max-width: 850px;
+    padding: 25px;
+    background-color: #fcfcfc;
+    border: 1px solid #f0e9e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    font-size: 1.05em;
 }
 
-.section-container h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #6b4226;
+/* Round Button Style - Enhanced Cafe Vibe */
+.round-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px; /* Slightly larger */
+    height: 160px; /* Slightly larger */
+    border-radius: 50%;
+    background-color: #d4a984; /* Richer accent color */
+    color: #4a332a; /* Dark text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em; /* Larger font */
+    text-align: center;
+    line-height: 1.3;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Deeper shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 30px; /* More space */
+    border: 3px solid #bbaaa1; /* Subtle, warm border */
 }
 
-.content-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
+.round-button:hover {
+    background-color: #bbaaa1; /* Warmer hover color */
+    transform: translateY(-7px); /* More pronounced lift */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Deeper shadow on hover */
+    color: #fff; /* White text on hover for better contrast */
 }
 
-.text-box,
-.image-box {
-  flex: 1 1 45%;
-  background-color: #fff;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+.contact-section { /* This is the general section for contact on the index page */
+    text-align: center;
+    background-color: #fcf8f5; /* Consistent warm background */
+    padding: 50px; /* More padding */
+    border-radius: 12px; /* More rounded */
+    border: 1px solid #f0e9e4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.contact-section p {
+    font-size: 1.1em;
 }
 
-.image-box img {
-  width: 100%;
-  border-radius: 12px;
+/* --- Menu Page Specific Styles --- */
+
+/* Grid Containers for Menu Items */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider min width */
+    gap: 40px; /* More space */
+    justify-content: center;
+    padding: 0 15px;
 }
 
-.image-box.dual {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Menu Item & Partner Item Styles */
+.menu-item, .partner-item {
+    background-color: #fcfcfc; /* Consistent light background */
+    border: 1px solid #f0e9e4; /* Softer border */
+    border-radius: 12px; /* More rounded */
+    padding: 25px; /* More padding */
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1); /* Softer, deeper shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu-box {
-  background-color: #ffe8cc;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: #3c2f2f;
+.menu-item:hover, .partner-item:hover {
+    transform: translateY(-10px); /* More pronounced lift */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Stronger shadow on hover */
 }
 
-.center-button {
-  text-align: center;
-  margin-top: 2rem;
+.item-visual {
+    width: 100%;
+    padding-top: 100%;
+    background-color: #e8e2de; /* Warmer placeholder */
+    border-radius: 10px; /* More rounded */
+    margin-bottom: 20px; /* More space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c7e75; /* Warmer color */
+    font-weight: bold;
+    font-size: 1.4em; /* Larger font */
+    border: 2px dashed #bbaaa1; /* Consistent dashed border */
 }
 
-.reverse .text-box {
-  order: 2;
+.menu-item p, .partner-item p {
+    font-weight: bold;
+    color: #4a332a; /* Deeper brown for item names */
+    margin: 12px 0 5px; /* Adjusted margins */
+    font-size: 1.2em; /* Larger font */
+}
+.menu-item small {
+    color: #6d4f45; /* Medium brown for prices */
+    font-size: 1em;
 }
 
-.reverse .image-box {
-  order: 1;
+/* Partner Section Specifics */
+.partners-section .small-block-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* More space */
 }
 
+.partners-section .small-block {
+    background-color: #d4a984; /* Richer accent color */
+    color: #4a332a; /* Darker text for contrast */
+    padding: 25px 45px; /* More padding */
+    border-radius: 12px; /* More rounded */
+    text-align: center;
+    max-width: 550px; /* Slightly wider */
+    width: 100%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Softer shadow */
+    font-weight: bold;
+    font-size: 1.15em; /* Larger font */
+    line-height: 1.5;
+}
+
+/* --- Form Specific Styles (for Contact and Feedback pages) --- */
+.form-container {
+    max-width: 650px; /* Slightly narrower for cozy feel */
+    margin: 0 auto;
+    padding: 35px; /* More padding */
+    background-color: #fefefb; /* Very light cream background */
+    border: 1px solid #f0e9e4; /* Softer border */
+    border-radius: 12px; /* More rounded */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Softer, deeper shadow */
+}
+
+.form-group {
+    margin-bottom: 25px; /* More space */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* More space */
+    font-weight: bold;
+    color: #4a332a; /* Deeper brown for labels */
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px; /* More padding */
+    border: 1px solid #dcd3ce; /* Softer, warmer border */
+    border-radius: 8px; /* More rounded */
+    font-size: 1.05em; /* Slightly larger font */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #d4a984; /* Accent color on focus */
+    box-shadow: 0 0 10px rgba(212, 169, 132, 0.4); /* Softer, wider shadow */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px; /* Taller textarea */
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 18px; /* More padding */
+    background-color: #6d4f45; /* Consistent medium brown */
+    color: #fcf8f5; /* Warm off-white text */
+    border: none;
+    border-radius: 10px; /* More rounded */
+    font-size: 1.2em; /* Larger font */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.05em; /* Spaced out text for button */
+}
+
+.submit-button:hover {
+    background-color: #4a332a; /* Darker brown on hover */
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* Deeper shadow on hover */
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 20px; /* More space */
+    font-weight: normal;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #3b2a24; /* Darker, richer brown for footer */
+    color: #fcf8f5; /* Warm off-white text */
+    text-align: center;
+    padding: 2.5rem 0; /* More padding */
+    margin-top: 60px; /* More top margin */
+    border-top: 6px solid #d4a984; /* Thicker, richer accent line */
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .fixed-nav {
+        padding: 10px 0;
+    }
+
+    .fixed-nav ul li {
+        margin: 8px 0;
+    }
+
+    .page-header h1 {
+        font-size: 2.2em;
+    }
+
+    h1 {
+        font-size: 2.6em;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-bottom: 15px;
+    }
+    h2::after {
+        bottom: 5px;
+        width: 80px;
+        height: 3px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+    .hero p {
+        font-size: 1.05em;
+    }
+
+    .content-block, .about-us .about-content, .exploration .exploration-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .content-block .column, .about-us .about-content p, .exploration .exploration-content p {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .image-placeholder {
+        height: 220px;
+        font-size: 1.1em;
+    }
+
+    .round-button {
+        width: 140px;
+        height: 140px;
+        font-size: 1.1em;
+        margin-top: 25px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu-item, .partner-item {
+        padding: 20px;
+    }
+
+    .item-visual {
+        padding-top: 80%;
+        font-size: 1.2em;
+    }
+
+    .partners-section .small-block {
+        max-width: 90%;
+        padding: 20px 30px;
+        font-size: 1.05em;
+    }
+
+    .form-container {
+        padding: 25px;
+        max-width: 95%;
+    }
+
+    .submit-button {
+        padding: 16px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    section {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    .page-header {
+        padding: 20px 0;
+        margin-bottom: 25px;
+    }
+    .page-header h1 {
+        font-size: 2em;
+    }
+    .fixed-nav ul li a {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .round-button {
+        width: 110px;
+        height: 110px;
+        font-size: 0.95em;
+        margin-top: 20px;
+    }
+    footer {
+        padding: 2rem 0;
+        margin-top: 40px;
+        font-size: 0.9em;
+    }
+}
