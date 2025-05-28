@@ -99,3 +99,11 @@ form#contactForm textarea:focus {
   color: #c62828;
 }
 
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card.hover-effect {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
