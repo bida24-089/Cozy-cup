@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
-    <link rel="stylesheet"href="styles.css">
+    <title>Feedback & Reviews</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="page-header">
-        <h1>Share Your Feedback</h1>
+        <h1>Share Your Feedback & Read Reviews</h1>
     </header>
 
     <nav class="fixed-nav">
@@ -26,54 +26,48 @@
         <section class="feedback-form-section">
             <h2>Tell Us What You Think</h2>
             <div class="form-container">
-                <form action="#" method="POST">
+                <form id="feedbackForm">
                     <div class="form-group">
-                        <label for="feedback-type">Type of Feedback:</label>
-                        <select id="feedback-type" name="feedback-type" required>
-                            <option value="">-- Please select --</option>
-                            <option value="compliment">Compliment</option>
-                            <option value="suggestion">Suggestion</option>
-                            <option value="issue">Issue/Complaint</option>
-                            <option value="general">General Comment</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Overall Experience:</label>
-                        <div class="radio-group">
-                            <input type="radio" id="exp-excellent" name="experience" value="excellent" required>
-                            <label for="exp-excellent">Excellent</label>
-                            <input type="radio" id="exp-good" name="experience" value="good">
-                            <label for="exp-good">Good</label>
-                            <input type="radio" id="exp-average" name="experience" value="average">
-                            <label for="exp-average">Average</label>
-                            <input type="radio" id="exp-poor" name="experience" value="poor">
-                            <label for="exp-poor">Poor</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="feedback-message">Your Feedback:</label>
-                        <textarea id="feedback-message" name="feedback-message" placeholder="Please provide your detailed feedback here..." required></textarea>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email-optional">Your Email (Optional):</label>
                         <input type="email" id="email-optional" name="email-optional">
                     </div>
+                    <div class="form-group">
+                        <label for="rating">Overall Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">-- Select a rating --</option>
+                            <option value="5">★★★★★ Excellent</option>
+                            <option value="4">★★★★ Good</option>
+                            <option value="3">★★★ Average</option>
+                            <option value="2">★★ Poor</option>
+                            <option value="1">★ Terrible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-message">Your Feedback:</label>
+                        <textarea id="feedback-message" name="feedback-message" placeholder="Please provide your detailed feedback here..." required></textarea>
+                    </div>
                     <button type="submit" class="submit-button">Submit Feedback</button>
+                    <p id="submissionMessage" style="text-align: center; margin-top: 20px; font-weight: bold; color: #5a3e36;"></p>
                 </form>
             </div>
         </section>
 
-        <section class="feedback-info-section">
-            <h2>Why Your Feedback Matters</h2>
-            <div class="form-container">
-                <p>Your thoughts help us improve! We value every piece of feedback we receive as it guides us in enhancing our products and services. Thank you for taking the time to share your experience with us.</p>
-            </div>
+        <section class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-display" id="reviewsDisplay">
+                </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Our Offerings. All rights reserved.</p>
     </footer>
+
+    <script src="feedback.js"></script>
 
 </body>
 </html>
