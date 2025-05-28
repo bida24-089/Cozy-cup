@@ -73,6 +73,14 @@ h2, h5 {
   font-weight: bold;
   color: #4a332a;
 }
+
+/* Only affects menu page */
+.menu-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Only applies to Contact Page */
 .contact-map {
   width: 100%;
