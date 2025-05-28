@@ -1,104 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Feedback & Reviews</title>
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    <link rel="stylesheet" href=" styles.css">
-</head>
-<body>
 
-    <header class="page-header">
-        <h1>Share Your Feedback & Reviews</h1>
-    </header>
 
-    <nav class="fixed-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <section class="feedback-form-section">
-            <h2>Tell Us What You Think</h2>
-            <div class="form-container">
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email-optional">Your Email (Optional):</label>
-                        <input type="email" id="email-optional" name="email-optional">
-                    </div>
-                    <div class="form-group">
-                        <label for="rating">Overall Rating:</label>
-                        <select id="rating" name="rating" required>
-                            <option value="">-- Select a rating --</option>
-                            <option value="5">★★★★★ Excellent</option>
-                            <option value="4">★★★★ Good</option>
-                            <option value="3">★★★ Average</option>
-                            <option value="2">★★ Poor</option>
-                            <option value="1">★ Terrible</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="feedback-message">Your Feedback:</label>
-                        <textarea id="feedback-message" name="feedback-message" placeholder="Please provide your detailed feedback here..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Submit Feedback</button>
-                    <p id="submissionMessage" style="text-align: center; margin-top: 20px; font-weight: bold; color: #5a3e36;"></p>
-                </form>
-                <section class="customer-reviews">
-  <h2>What Our Customers Say</h2>
-  <div class="reviews-container">
-    
-    <div class="review">
-      <p class="review-text">“The coffee is absolutely divine, and the staff are always so friendly. It’s my favorite place to unwind!”</p>
-      <p class="reviewer">– Thato M.</p>
+
+<div class="container my-5">
+  <h2 class="mb-4">What Our Customers Say</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="p-3 border rounded bg-white shadow-sm">
+        <p>"The best coffee I've ever had in Gaborone! Lovely staff and cozy atmosphere."</p>
+        <p class="fw-bold mb-0">– Naledi M.</p>
+      </div>
     </div>
-
-    <div class="review">
-      <p class="review-text">“I love the cozy atmosphere and fresh pastries. The croissants are a must-try!”</p>
-      <p class="reviewer">– Naledi R.</p>
+    <div class="col-md-4">
+      <div class="p-3 border rounded bg-white shadow-sm">
+        <p>"A perfect spot for lunch breaks. Their pastries are to die for!"</p>
+        <p class="fw-bold mb-0">– Tumi K.</p>
+      </div>
     </div>
-
-    <div class="review">
-      <p class="review-text">“The latte art here is next level. It’s a small detail, but it really adds to the experience.”</p>
-      <p class="reviewer">– Keitumetse S.</p>
+    <div class="col-md-4">
+      <div class="p-3 border rounded bg-white shadow-sm">
+        <p>"Great service, relaxing vibes, and consistently good food."</p>
+        <p class="fw-bold mb-0">– Kabelo R.</p>
+      </div>
     </div>
-
-    <div class="review">
-      <p class="review-text">“Always a peaceful place to sit and study or catch up with friends. Great vibes!”</p>
-      <p class="reviewer">– Neo D.</p>
-    </div>
-
-    <div class="review">
-      <p class="review-text">“Such a welcoming environment. You can tell everything is made with love. Highly recommend!”</p>
-      <p class="reviewer">– Kabelo T.</p>
-    </div>
-
   </div>
-</section>
-
-            </div>
-        </section>
-
-       
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Our Offerings. All rights reserved.</p>
-    </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="feedback.js"></script> 
-    </body>
-</html>
+</div>
