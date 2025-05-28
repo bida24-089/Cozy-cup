@@ -1,683 +1,336 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* ======================================= */
+/* 1. General Body & Global Styles         */
+/* ======================================= */
 
-/* Basic Reset & Body Styles */
 body {
-    font-family: 'Lora', serif; /* Warmer serif font for body */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    line-height: 1.7; /* Slightly increased line-height for readability */
-    background-color: #fcf8f5; /* A very soft, warm off-white/cream */
-    /* Subtle background texture using a radial gradient for a paper/fabric feel */
-    background-image: radial-gradient(circle at top left, #fefefe, #fcf8f5);
-    color: #333;
-    padding-top: 60px; /* Space for the fixed nav bar */
+    background-color: #fcfcf8; /* Light cream background */
+    color: #333; /* Default text color, good contrast */
+    line-height: 1.6;
 }
 
-/* Global Headers */
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Elegant serif for titles */
-    color: #4a332a; /* Deeper, richer brown for titles */
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 0.03em; /* Slightly more spacious for elegance */
+/* Main content area padding - using Bootstrap's .container for max-width */
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-h1 {
-    font-size: 3em; /* Slightly larger */
-    padding: 25px 0;
-    font-weight: 700;
+/* ======================================= */
+/* 2. Theme Colors & Custom Utilities      */
+/* ======================================= */
+
+/* Custom background color for Navbar (your accent brown) */
+.bg-custom-brown {
+    background-color: #d4a984 !important;
 }
 
+/* Custom text color for specific elements (your darker brown) */
+.text-cozy-brown {
+    color: #5a3e36 !important;
+}
+
+/* ======================================= */
+/* 3. Typography & Headings                */
+/* ======================================= */
+
+/* Main headings (h1 will be handled by Navbar brand) */
 h2 {
-    font-size: 2.4em; /* Slightly larger */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #5a3e36; /* Darker brown for main headings */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 2.5em; /* Prominent size */
     position: relative;
-    padding-bottom: 20px; /* More space for the underline effect */
-    font-weight: 600;
+    padding-bottom: 15px; /* Space for the custom underline */
 }
 
+/* Custom underline effect for h2 */
 h2::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 8px; /* Adjusted position */
+    bottom: 0;
     transform: translateX(-50%);
-    width: 90px; /* Slightly wider */
-    height: 4px; /* Slightly thicker */
-    background-color: #d4a984; /* A slightly richer, warmer accent color */
-    border-radius: 2px; /* Soften the ends */
+    width: 80px; /* Wider underline */
+    height: 4px; /* Thicker underline */
+    background-color: #d4a984; /* Accent color */
+    border-radius: 2px;
 }
 
-/* Header Section (for page title) */
-.page-header {
+/* General paragraph styling */
+p {
+    font-size: 1em;
+    margin-bottom: 1rem; /* Bootstrap default spacing */
+}
+
+/* Lead paragraphs (Bootstrap's .lead class) */
+.lead {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+/* ======================================= */
+/* 4. Navbar Customization                 */
+/* (Overrides Bootstrap's default styles)  */
+/* ======================================= */
+
+.navbar {
+    background-color: #d4a984; /* Your accent brown */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Soft shadow */
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.navbar-brand {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #4a332a !important; /* Dark brown for brand text */
+    font-size: 2rem !important; /* Larger and more prominent */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #f3e9dd !important; /* Slightly lighter on hover */
+}
+
+/* Navigation Links - Adjusted for "Round Clickable Buttons" feel */
+.navbar-nav .nav-link {
+    color: #fff !important; /* White links */
+    font-weight: 600; /* Slightly bolder */
+    padding: 0.75rem 1.5rem; /* Increased padding to make them feel more "clickable" */
+    border-radius: 5px; /* More prominent rounding as per original */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle transparent background on hover/active */
+    color: #f3e9dd !important; /* Lighter text on hover/active */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Lighter border for toggler */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ======================================= */
+/* 5. Buttons Customization                */
+/* ======================================= */
+
+/* Primary Button (e.g., View Menu, Send Message, Submit Feedback) */
+.btn-warning {
+    background-color: #d4a984;
+    border-color: #d4a984;
+    color: #4a332a;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #c09672;
+    border-color: #c09672;
+    transform: translateY(-2px);
+    color: #4a332a;
+}
+
+/* Outline Secondary Button (e.g., Learn More) */
+.btn-outline-secondary {
+    border-color: #5a3e36;
+    color: #5a3e36;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
     background-color: #5a3e36;
     color: #fff;
-    padding: 25px 0; /* Increased padding */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Softer, more diffused shadow */
-    margin-bottom: 40px; /* More space below header */
 }
 
-.page-header h1 {
-    margin: 0;
-    font-size: 2.8em;
+/* Info Button (e.g., for links in contact details) */
+.btn-outline-info {
+    border-color: #d4a984;
+    color: #d4a984;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-outline-info:hover {
+    background-color: #d4a984;
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow */
 }
 
 
-/* Fixed Navigation Bar */
-.fixed-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #6d4f45; /* Slightly deeper brown for nav */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25); /* Softer shadow */
-    z-index: 1000;
-    text-align: center;
-    padding: 12px 0; /* Increased padding */
+/* ======================================= */
+/* 6. Form Elements Customization          */
+/* ======================================= */
+
+.form-label {
+    font-weight: 600;
+    color: #5a3e36;
+    margin-bottom: 0.5rem;
 }
 
-.fixed-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.fixed-nav ul li {
-    margin: 0 18px; /* Slightly more space */
-}
-
-.fixed-nav ul li a {
-    color: #fcf8f5; /* Use the warm off-white for links */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px; /* Increased padding */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 6px; /* Slightly more rounded */
-    font-size: 1.05em; /* Slightly larger font */
-}
-
-.fixed-nav ul li a:hover {
-    background-color: #8c6a5d; /* Lighter on hover */
-    color: #fff; /* Ensure text remains bright */
-    border-radius: 6px;
-}
-
-/* Main Content Area */
-main {
-    max-width: 1100px; /* Slightly narrower for coziness */
-    margin: 30px auto; /* More margin */
-    padding: 30px; /* More padding */
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* More pronounced, softer shadow */
-    border-radius: 12px; /* More rounded corners */
-}
-
-section {
-    margin-bottom: 50px; /* More space between sections */
-    padding: 25px; /* More padding */
-    border-bottom: 1px solid #f0e9e4; /* Softer separator */
-}
-
-section:last-child {
-    border-bottom: none;
-}
-
-/* --- Homepage Specific Styles --- */
-
-.hero {
-    background-color: #fefefb; /* A very light cream */
-    padding: 60px 30px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 50px;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.08); /* Stronger inner shadow */
-}
-
-.hero p {
-    font-size: 1.15em; /* Larger text for hero */
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.content-block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px; /* More space between columns */
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.content-block .column {
-    flex: 1;
-    min-width: 320px;
-    padding: 30px; /* More padding */
-    background-color: #fcfcfc; /* Very light background */
-    border: 1px solid #f0e9e4; /* Softer border */
-    border-radius: 10px; /* More rounded */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Softer shadow */
-}
-
-/* Image Placeholder Style */
-.image-placeholder {
-    background-color: #e8e2de; /* Slightly warmer placeholder */
-    height: 280px; /* Taller */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #8c7e75; /* Warmer color for text */
-    font-weight: bold;
-    border: 2px dashed #bbaaa1; /* Thicker, warmer dashed border */
-    border-radius: 8px; /* More rounded */
-    font-size: 1.3em;
-}
-
-/* Shared layout for about and exploration sections */
-.about-us .about-content,
-.exploration .exploration-content {
-    display: flex;
-    flex-direction: row; /* Side-by-side layout */
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 25px;
-    flex-wrap: wrap; /* Responsive fallback */
-}
-
-/* Style for paragraph and image blocks inside about/exploration */
-.about-us .about-content p,
-.exploration .exploration-content p,
-.about-us .about-content img,
-.exploration .exploration-content img {
-    flex: 1;
-    max-width: 500px;
-}
-
-/* Paragraph styling */
-.about-us .about-content p,
-.exploration .exploration-content p {
-    padding: 25px;
-    background-color: #fcfcfc;
-    border: 1px solid #f0e9e4;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: center;
-    font-size: 1.05em;
-}
-
-/* Responsive layout for small screens */
-@media (max-width: 768px) {
-    .about-us .about-content,
-    .exploration .exploration-content {
-        flex-direction: column;
-    }
-}
-
-/* Round Button Style - Enhanced Cafe Vibe */
-.round-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 160px; /* Slightly larger */
-    height: 160px; /* Slightly larger */
-    border-radius: 50%;
-    background-color: #d4a984; /* Richer accent color */
-    color: #4a332a; /* Dark text for contrast */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.25em; /* Larger font */
-    text-align: center;
-    line-height: 1.3;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Deeper shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 30px; /* More space */
-    border: 3px solid #bbaaa1; /* Subtle, warm border */
-}
-
-.round-button:hover {
-    background-color: #bbaaa1; /* Warmer hover color */
-    transform: translateY(-7px); /* More pronounced lift */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Deeper shadow on hover */
-    color: #fff; /* White text on hover for better contrast */
-}
-
-.contact-section { /* This is the general section for contact on the index page */
-    text-align: center;
-    background-color: #fcf8f5; /* Consistent warm background */
-    padding: 50px; /* More padding */
-    border-radius: 12px; /* More rounded */
-    border: 1px solid #f0e9e4;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-.contact-section p {
-    font-size: 1.1em;
-}
-
-/* --- Menu Page Specific Styles --- */
-
-/* Grid Containers for Menu Items */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider min width */
-    gap: 40px; /* More space */
-    justify-content: center;
-    padding: 0 15px;
-}
-
-/* Menu Item & Partner Item Styles */
-.menu-item, .partner-item {
-    background-color: #fcfcfc; /* Consistent light background */
-    border: 1px solid #f0e9e4; /* Softer border */
-    border-radius: 12px; /* More rounded */
-    padding: 25px; /* More padding */
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1); /* Softer, deeper shadow */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.menu-item:hover, .partner-item:hover {
-    transform: translateY(-10px); /* More pronounced lift */
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Stronger shadow on hover */
-}
-
-.item-visual {
-    width: 100%;
-    padding-top: 100%;
-    background-color: #e8e2de; /* Warmer placeholder */
-    border-radius: 10px; /* More rounded */
-    margin-bottom: 20px; /* More space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #8c7e75; /* Warmer color */
-    font-weight: bold;
-    font-size: 1.4em; /* Larger font */
-    border: 2px dashed #bbaaa1; /* Consistent dashed border */
-}
-
-.menu-item p, .partner-item p {
-    font-weight: bold;
-    color: #4a332a; /* Deeper brown for item names */
-    margin: 12px 0 5px; /* Adjusted margins */
-    font-size: 1.2em; /* Larger font */
-}
-.menu-item small {
-    color: #6d4f45; /* Medium brown for prices */
-    font-size: 1em;
-}
-
-/* Partner Section Specifics */
-.partners-section .small-block-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px; /* More space */
-}
-
-.partners-section .small-block {
-    background-color: #d4a984; /* Richer accent color */
-    color: #4a332a; /* Darker text for contrast */
-    padding: 25px 45px; /* More padding */
-    border-radius: 12px; /* More rounded */
-    text-align: center;
-    max-width: 550px; /* Slightly wider */
-    width: 100%;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Softer shadow */
-    font-weight: bold;
-    font-size: 1.15em; /* Larger font */
-    line-height: 1.5;
-}
-
-/* --- Form Specific Styles (for Contact and Feedback pages) --- */
-.form-container {
-    max-width: 650px; /* Slightly narrower for cozy feel */
-    margin: 0 auto;
-    padding: 35px; /* More padding */
-    background-color: #fefefb; /* Very light cream background */
-    border: 1px solid #f0e9e4; /* Softer border */
-    border-radius: 12px; /* More rounded */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Softer, deeper shadow */
-}
-
-.form-group {
-    margin-bottom: 25px; /* More space */
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px; /* More space */
-    font-weight: bold;
-    color: #4a332a; /* Deeper brown for labels */
-    font-size: 1.05em;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 14px; /* More padding */
-    border: 1px solid #dcd3ce; /* Softer, warmer border */
-    border-radius: 8px; /* More rounded */
-    font-size: 1.05em; /* Slightly larger font */
-    box-sizing: border-box;
+.form-control,
+.form-select,
+.form-control:focus,
+.form-select:focus {
+    border-radius: 8px;
+    border: 1px solid #e7dcd3;
+    padding: 0.75rem 1rem;
+    box-shadow: none !important;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: #d4a984; /* Accent color on focus */
-    box-shadow: 0 0 10px rgba(212, 169, 132, 0.4); /* Softer, wider shadow */
-    outline: none;
+.form-control:focus,
+.form-select:focus {
+    border-color: #d4a984;
+    box-shadow: 0 0 0 0.25rem rgba(212, 169, 132, 0.25) !important;
 }
 
-.form-group textarea {
+textarea.form-control {
+    min-height: 120px;
     resize: vertical;
-    min-height: 150px; /* Taller textarea */
 }
 
-.submit-button {
-    display: block;
-    width: 100%;
-    padding: 18px; /* More padding */
-    background-color: #6d4f45; /* Consistent medium brown */
-    color: #fcf8f5; /* Warm off-white text */
-    border: none;
-    border-radius: 10px; /* More rounded */
-    font-size: 1.2em; /* Larger font */
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    letter-spacing: 0.05em; /* Spaced out text for button */
+
+/* ======================================= */
+/* 7. Section/Container Styles (Revert to original look) */
+/* ======================================= */
+
+/* Hero Section specific container styling */
+/* Apply this to the <section> with the hero content, e.g., <section class="bg-light py-5 hero-section-custom"> */
+.hero-section-custom { /* Add this class to your hero section in HTML */
+    background-color: #f8f8f0; /* Original hero section background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 50px 20px; /* Adjust padding if needed, or let Bootstrap's py-5 handle it */
 }
 
-.submit-button:hover {
-    background-color: #4a332a; /* Darker brown on hover */
-    transform: translateY(-3px); /* More pronounced lift */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* Deeper shadow on hover */
+/* About Us Mini Section specific container styling */
+/* Apply this to the <section> with about content, e.g., <section class="py-5 bg-white about-section-custom"> */
+.about-section-custom { /* Add this class to your about section in HTML */
+    background-color: #fff; /* Original about us mini section background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 40px 20px; /* Adjust padding if needed */
 }
 
-.radio-group label {
-    display: inline-block;
-    margin-right: 20px; /* More space */
-    font-weight: normal;
-    color: #333;
-    font-size: 1em;
+/* Card Components - Adjusted to match original form/review containers */
+.card {
+    border: 1px solid #e0e0e0; /* Subtle border as per original containers */
+    border-radius: 8px; /* Original border-radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Original subtle shadow */
+    transition: none; /* Remove transform/hover effects for a more static look */
 }
 
-/* ------------------------------------------- */
-/* CSS ADDITIONS for Contact Page (contact-detail sections) */
-/* ------------------------------------------- */
-
-/* Layout for the container holding contact details */
-.contact-methods-section .form-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for detail blocks */
-    gap: 20px; /* Space between the detail blocks */
-    padding: 30px; /* Padding for the container itself, making sure content has space */
-    box-sizing: border-box; /* Ensures padding is included in the element's total width/height */
+.card:hover {
+    transform: none; /* Remove hover lift */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Slightly increased shadow on hover, but still subtle */
 }
 
-/* Styling for the introductory paragraph within the contact methods section */
-.contact-methods-section .form-container > p {
-    grid-column: 1 / -1; /* Makes this paragraph span across all grid columns */
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #5a3e36; /* Dark brown, matching your theme */
+.card-body {
+    padding: 1.5rem;
 }
 
-/* Styling for each individual contact detail block */
-.contact-detail {
-    background-color: #f8f6f2; /* A slightly softer, distinct background color */
-    border: 1px solid #e7dcd3; /* Subtle border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
-    transition: transform 0.2s ease-in-out; /* Smooth animation on hover */
+.card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #5a3e36;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
 }
 
-/* Hover effect for contact detail blocks */
-.contact-detail:hover {
-    transform: translateY(-3px); /* Lifts the box slightly when hovered */
+/* Specific styling for contact details, if they remain simple cards */
+.contact-methods-section .card.bg-light {
+    background-color: #fcfcfc !important; /* Lighter background for contact details */
 }
 
-/* Styling for the headings within each contact detail block (e.g., "Visit Us") */
-.contact-detail h3 {
-    font-family: 'Playfair Display', serif; /* Assumes Playfair Display is used for headings */
-    color: #5a3e36; /* Dark brown */
-    margin-top: 0;
-    margin-bottom: 15px; /* Space below heading */
-    font-size: 1.6em; /* Prominent size */
-    border-bottom: 2px solid #d4a984; /* Accent color underline */
-    padding-bottom: 8px; /* Space between text and underline */
-    display: inline-block; /* Ensures underline only spans text width */
-    line-height: 1.2; /* Adjust line height for better appearance */
+/* Review item specific styling within cards */
+.card .rating {
+    color: #d4a984;
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+}
+.card .reviewer-info {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 1rem;
 }
 
-/* Styling for general paragraphs within contact detail blocks */
-.contact-detail p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555; /* Slightly softer text color for readability */
-    margin-bottom: 10px;
+/* ======================================= */
+/* 8. Image Styles                         */
+/* ======================================= */
+
+.img-fluid {
+    border-radius: 8px;
+}
+/* For hero image in index.html */
+.hero-section img.rounded {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Styling for strong/bold text within contact detail paragraphs (e.g., "Phone:") */
-.contact-detail p strong {
-    color: #4a332a; /* Darker brown for emphasis */
-}
 
-/* Styling for links within contact detail blocks (e.g., "Get Directions") */
-.contact-detail a {
-    color: #d4a984; /* Accent color for links */
-    text-decoration: none; /* No underline by default */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-}
+/* ======================================= */
+/* 9. Footer                               */
+/* ======================================= */
 
-/* Hover effect for links within contact detail blocks */
-.contact-detail a:hover {
-    color: #c09672; /* Slightly darker accent on hover */
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* ------------------------------------------- */
-/* Responsive adjustments for the contact page */
-/* (Add these to your existing @media (max-width: 768px) block or create one) */
-/* ------------------------------------------- */
-@media (max-width: 768px) {
-    .contact-methods-section .form-container {
-        grid-template-columns: 1fr; /* Stack contact details in a single column on small screens */
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-}
-/* Footer */
 footer {
-    background-color: #3b2a24; /* Darker, richer brown for footer */
-    color: #fcf8f5; /* Warm off-white text */
+    background-color: #4a332a;
+    color: #f3e9dd;
+    padding: 25px;
     text-align: center;
-    padding: 2.5rem 0; /* More padding */
-    margin-top: 60px; /* More top margin */
-    border-top: 6px solid #d4a984; /* Thicker, richer accent line */
-    font-size: 0.95em;
+    font-size: 0.9em;
+    margin-top: 50px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding-top: 120px;
-    }
+/* ======================================= */
+/* 10. Responsive Adjustments              */
+/* ======================================= */
 
-    .fixed-nav {
-        padding: 10px 0;
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.6rem !important;
     }
-
-    .fixed-nav ul li {
-        margin: 8px 0;
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 0.75rem 1rem;
     }
-
-    .page-header h1 {
-        font-size: 2.2em;
-    }
-
-    h1 {
-        font-size: 2.6em;
-    }
-
     h2 {
         font-size: 2em;
-        padding-bottom: 15px;
     }
-    h2::after {
-        bottom: 5px;
-        width: 80px;
-        height: 3px;
-    }
-
-    .hero {
-        padding: 40px 20px;
-        margin-bottom: 40px;
-    }
-    .hero p {
-        font-size: 1.05em;
-    }
-
-    .content-block, .about-us .about-content, .exploration .exploration-content {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .content-block .column, .about-us .about-content p, .exploration .exploration-content p {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px;
-    }
-
-    .image-placeholder {
-        height: 220px;
-        font-size: 1.1em;
-    }
-
-    .round-button {
-        width: 140px;
-        height: 140px;
-        font-size: 1.1em;
-        margin-top: 25px;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .menu-item, .partner-item {
-        padding: 20px;
-    }
-
-    .item-visual {
-        padding-top: 80%;
-        font-size: 1.2em;
-    }
-
-    .partners-section .small-block {
-        max-width: 90%;
-        padding: 20px 30px;
-        font-size: 1.05em;
-    }
-
-    .form-container {
-        padding: 25px;
-        max-width: 95%;
-    }
-
-    .submit-button {
-        padding: 16px;
-        font-size: 1.1em;
+    .hero-section .hero-text h2 {
+        font-size: 2.5em;
     }
 }
 
-@media (max-width: 480px) {
-    main {
-        padding: 15px;
-        margin: 15px auto;
-    }
-    section {
-        padding: 15px;
-        margin-bottom: 30px;
-    }
-    .page-header {
-        padding: 20px 0;
-        margin-bottom: 25px;
-    }
-    .page-header h1 {
-        font-size: 2em;
-    }
-    .fixed-nav ul li a {
-        font-size: 0.85em;
-        padding: 6px 10px;
-    }
-    h1 {
-        font-size: 2em;
-    }
+@media (max-width: 767.98px) {
     h2 {
         font-size: 1.8em;
     }
-    .round-button {
-        width: 110px;
-        height: 110px;
-        font-size: 0.95em;
-        margin-top: 20px;
+    h2::after {
+        width: 50px;
+        height: 3px;
     }
-    footer {
-        padding: 2rem 0;
-        margin-top: 40px;
-        font-size: 0.9em;
+    .hero-section .hero-text h2 {
+        font-size: 2em;
     }
-}
-.customer-reviews {
-  background-color: #fcfcf8;
-  padding: 60px 30px;
-  text-align: center;
-}
-
-.customer-reviews h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
-  color: #4a332a;
-}
-
-.reviews-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.review {
-  background-color: #fff;
-  border: 1px solid #f0e9e4;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  max-width: 320px;
-  padding: 25px;
-  font-style: italic;
-  color: #5a4b43;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.reviewer {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #8c7e75;
+    .lead {
+        font-size: 1rem;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .card-body {
+        padding: 1rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
 }
