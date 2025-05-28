@@ -162,6 +162,7 @@ section:last-child {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Softer shadow */
 }
 
+/* Image Placeholder Style */
 .image-placeholder {
     background-color: #e8e2de; /* Slightly warmer placeholder */
     height: 280px; /* Taller */
@@ -175,17 +176,30 @@ section:last-child {
     font-size: 1.3em;
 }
 
-.about-us .about-content, .exploration .exploration-content {
+/* Shared layout for about and exploration sections */
+.about-us .about-content,
+.exploration .exploration-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Side-by-side layout */
+    justify-content: center;
     align-items: center;
-    gap: 30px; /* More space */
+    gap: 30px;
     padding: 25px;
+    flex-wrap: wrap; /* Responsive fallback */
 }
 
-.about-us .about-content p, .exploration .exploration-content p {
+/* Style for paragraph and image blocks inside about/exploration */
+.about-us .about-content p,
+.exploration .exploration-content p,
+.about-us .about-content img,
+.exploration .exploration-content img {
     flex: 1;
-    max-width: 850px;
+    max-width: 500px;
+}
+
+/* Paragraph styling */
+.about-us .about-content p,
+.exploration .exploration-content p {
     padding: 25px;
     background-color: #fcfcfc;
     border: 1px solid #f0e9e4;
@@ -193,6 +207,14 @@ section:last-child {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     text-align: center;
     font-size: 1.05em;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .about-us .about-content,
+    .exploration .exploration-content {
+        flex-direction: column;
+    }
 }
 
 /* Round Button Style - Enhanced Cafe Vibe */
