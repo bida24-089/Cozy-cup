@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet"href=" styles.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - COZY CUP</title>
+ </head>
 <body>
 
-    <header class="page-header">
-        <h1>Get In Touch</h1>
-   <header class="page-header">
-       <h1>COZY CUP CAFE</h1>
-        <p>Savour Sunshine with Coffee and Pastries</p>
-       <h1>Get In Touch</h1>
-    </header>
+  <header class="page-header">
+    <h1>Connect With COZY CUP CAFE</h1>
+  </header>
 
-    <nav class="fixed-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-    </nav>
+  <nav class="fixed-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <section class="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <div class="form-container">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-            </div>
-        </section>
+  <main>
+    <section class="contact-methods-section">
+      <h2>Get In Touch</h2>
+      <div class="form-container">
+        <p>We'd love to hear from you! Whether you have a question, a special request, or are looking to partner with us, please reach out.</p>
 
-        <section class="contact-info-section">
-            <h2>Our Location</h2>
-            <div class="form-container">
-                <p><strong>Address:</strong>Old Lobatse road, Gaborone,</p>
-                <p><strong>Phone:</strong>  356-7890</p>
-                <p><strong>Email:</strong> info@COZY CUP.com</p>
-                <p><strong>Hours:</strong> Mon-Fri: 7 AM - 6 PM | Sat-Sun: 8 AM - 5 PM</p>
-            </div>
-        </section>
-    </main>
+        <div class="contact-detail">
+          <h3>Visit Us</h3>
+          <p><strong>Savour Sunshine Cafe</strong><br>
+          123 Coffee Bean Lane<br>
+          Cafeville, CA 90210</p>
+          <p><a href="https://maps.google.com/?q=123+Coffee+Bean+Lane,+Cafeville,+CA+90210" target="_blank">Get Directions on Google Maps</a></p>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Our Offerings. All rights reserved.</p>
-    </footer>
+        <div class="contact-detail">
+          <h3>Call Us</h3>
+          <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+          <p>Available during business hours.</p>
+        </div>
+
+        <div class="contact-detail">
+          <h3>Email Us</h3>
+          <p><strong>General Inquiries:</strong> <a href="mailto:info@savoursunshine.com">info@savoursunshine.com</a></p>
+        </div>
+
+        <div class="contact-detail">
+          <h3>Business Hours</h3>
+          <p>Monday - Friday: 7:00 AM - 6:00 PM<br>
+          Saturday: 8:00 AM - 5:00 PM<br>
+          Sunday: 8:00 AM - 4:00 PM</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="inquiry-form-section">
+      <h2>Send Us a Message</h2>
+      <div class="form-container">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="inquiry-name">Your Name:</label>
+            <input type="text" id="inquiry-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="inquiry-email">Your Email:</label>
+            <input type="email" id="inquiry-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="inquiry-phone">Phone Number (Optional):</label>
+            <input type="tel" id="inquiry-phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="inquiry-type">Reason for Contact:</label>
+            <select id="inquiry-type" name="inquiry-type" required>
+              <option value="">-- Select reason --</option>
+              <option value="general">General Inquiry</option>
+              <option value="booking">Cafe Booking / Event Space</option>
+              <option value="catering">Catering Request</option>
+              <option value="feedback">Feedback (Use Feedback Page for reviews)</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inquiry-message">Your Message:</label>
+            <textarea id="inquiry-message" name="message" placeholder="Please provide details about your inquiry, including dates/times for booking/catering if applicable." required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+          <p id="contactSubmissionMessage" style="text-align: center; margin-top: 20px; font-weight: bold; color: #5a3e36;"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Our Offerings. All rights reserved.</p>
+  </footer>
+
+  <script src="contact.js"></script>
 
 </body>
 </html>
