@@ -1,336 +1,61 @@
-/* ======================================= */
-/* 1. General Body & Global Styles         */
-/* ======================================= */
-
+/* General body and font styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    background-color: #fcfcf8; /* Light cream background */
-    color: #333; /* Default text color, good contrast */
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfcf8;
+  color: #4a332a;
+  margin: 0;
+  padding: 0;
 }
 
-/* Main content area padding - using Bootstrap's .container for max-width */
-.container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-/* ======================================= */
-/* 2. Theme Colors & Custom Utilities      */
-/* ======================================= */
-
-/* Custom background color for Navbar (your accent brown) */
-.bg-custom-brown {
-    background-color: #d4a984 !important;
-}
-
-/* Custom text color for specific elements (your darker brown) */
-.text-cozy-brown {
-    color: #5a3e36 !important;
-}
-
-/* ======================================= */
-/* 3. Typography & Headings                */
-/* ======================================= */
-
-/* Main headings (h1 will be handled by Navbar brand) */
-h2 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #5a3e36; /* Darker brown for main headings */
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    font-size: 2.5em; /* Prominent size */
-    position: relative;
-    padding-bottom: 15px; /* Space for the custom underline */
-}
-
-/* Custom underline effect for h2 */
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 80px; /* Wider underline */
-    height: 4px; /* Thicker underline */
-    background-color: #d4a984; /* Accent color */
-    border-radius: 2px;
-}
-
-/* General paragraph styling */
-p {
-    font-size: 1em;
-    margin-bottom: 1rem; /* Bootstrap default spacing */
-}
-
-/* Lead paragraphs (Bootstrap's .lead class) */
-.lead {
-    font-size: 1.25rem;
-    color: #555;
-}
-
-/* ======================================= */
-/* 4. Navbar Customization                 */
-/* (Overrides Bootstrap's default styles)  */
-/* ======================================= */
-
+/* Navbar styling */
 .navbar {
-    background-color: #d4a984; /* Your accent brown */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Soft shadow */
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+  background-color: #d4a984;
 }
-
+.navbar .nav-link,
 .navbar-brand {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #4a332a !important; /* Dark brown for brand text */
-    font-size: 2rem !important; /* Larger and more prominent */
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #fff;
+  font-weight: bold;
+}
+.navbar .nav-link:hover {
+  color: #eee;
 }
 
-.navbar-brand:hover {
-    color: #f3e9dd !important; /* Slightly lighter on hover */
+/* Header styling */
+.page-header {
+  background-color: #f3e9dd;
+  padding: 40px 0;
+  text-align: center;
+  color: #4a332a;
 }
 
-/* Navigation Links - Adjusted for "Round Clickable Buttons" feel */
-.navbar-nav .nav-link {
-    color: #fff !important; /* White links */
-    font-weight: 600; /* Slightly bolder */
-    padding: 0.75rem 1.5rem; /* Increased padding to make them feel more "clickable" */
-    border-radius: 5px; /* More prominent rounding as per original */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Subtle transparent background on hover/active */
-    color: #f3e9dd !important; /* Lighter text on hover/active */
-}
-
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5); /* Lighter border for toggler */
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-
-/* ======================================= */
-/* 5. Buttons Customization                */
-/* ======================================= */
-
-/* Primary Button (e.g., View Menu, Send Message, Submit Feedback) */
-.btn-warning {
-    background-color: #d4a984;
-    border-color: #d4a984;
-    color: #4a332a;
-    font-weight: bold;
-    padding: 12px 25px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-}
-
-.btn-warning:hover {
-    background-color: #c09672;
-    border-color: #c09672;
-    transform: translateY(-2px);
-    color: #4a332a;
-}
-
-/* Outline Secondary Button (e.g., Learn More) */
-.btn-outline-secondary {
-    border-color: #5a3e36;
-    color: #5a3e36;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #5a3e36;
-    color: #fff;
-}
-
-/* Info Button (e.g., for links in contact details) */
-.btn-outline-info {
-    border-color: #d4a984;
-    color: #d4a984;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-.btn-outline-info:hover {
-    background-color: #d4a984;
-    color: #fff;
-}
-
-
-/* ======================================= */
-/* 6. Form Elements Customization          */
-/* ======================================= */
-
-.form-label {
-    font-weight: 600;
-    color: #5a3e36;
-    margin-bottom: 0.5rem;
-}
-
-.form-control,
-.form-select,
-.form-control:focus,
-.form-select:focus {
-    border-radius: 8px;
-    border: 1px solid #e7dcd3;
-    padding: 0.75rem 1rem;
-    box-shadow: none !important;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-control:focus,
-.form-select:focus {
-    border-color: #d4a984;
-    box-shadow: 0 0 0 0.25rem rgba(212, 169, 132, 0.25) !important;
-}
-
-textarea.form-control {
-    min-height: 120px;
-    resize: vertical;
-}
-
-
-/* ======================================= */
-/* 7. Section/Container Styles (Revert to original look) */
-/* ======================================= */
-
-/* Hero Section specific container styling */
-/* Apply this to the <section> with the hero content, e.g., <section class="bg-light py-5 hero-section-custom"> */
-.hero-section-custom { /* Add this class to your hero section in HTML */
-    background-color: #f8f8f0; /* Original hero section background */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 50px 20px; /* Adjust padding if needed, or let Bootstrap's py-5 handle it */
-}
-
-/* About Us Mini Section specific container styling */
-/* Apply this to the <section> with about content, e.g., <section class="py-5 bg-white about-section-custom"> */
-.about-section-custom { /* Add this class to your about section in HTML */
-    background-color: #fff; /* Original about us mini section background */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 40px 20px; /* Adjust padding if needed */
-}
-
-/* Card Components - Adjusted to match original form/review containers */
-.card {
-    border: 1px solid #e0e0e0; /* Subtle border as per original containers */
-    border-radius: 8px; /* Original border-radius */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Original subtle shadow */
-    transition: none; /* Remove transform/hover effects for a more static look */
-}
-
-.card:hover {
-    transform: none; /* Remove hover lift */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Slightly increased shadow on hover, but still subtle */
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #5a3e36;
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-}
-
-/* Specific styling for contact details, if they remain simple cards */
-.contact-methods-section .card.bg-light {
-    background-color: #fcfcfc !important; /* Lighter background for contact details */
-}
-
-/* Review item specific styling within cards */
-.card .rating {
-    color: #d4a984;
-    font-size: 1.2em;
-    margin-bottom: 0.5rem;
-}
-.card .reviewer-info {
-    font-size: 0.85em;
-    color: #888;
-    margin-top: 1rem;
-}
-
-/* ======================================= */
-/* 8. Image Styles                         */
-/* ======================================= */
-
-.img-fluid {
-    border-radius: 8px;
-}
-/* For hero image in index.html */
-.hero-section img.rounded {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-
-/* ======================================= */
-/* 9. Footer                               */
-/* ======================================= */
-
+/* Footer styling */
 footer {
-    background-color: #4a332a;
-    color: #f3e9dd;
-    padding: 25px;
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 50px;
+  background-color: #eee;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  color: #4a332a;
 }
 
-/* ======================================= */
-/* 10. Responsive Adjustments              */
-/* ======================================= */
-
-@media (max-width: 991.98px) {
-    .navbar-brand {
-        font-size: 1.6rem !important;
-    }
-    .navbar-nav .nav-link {
-        text-align: center;
-        padding: 0.75rem 1rem;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    .hero-section .hero-text h2 {
-        font-size: 2.5em;
-    }
+/* Buttons */
+.btn-custom {
+  background-color: #d4a984;
+  color: #4a332a;
+  font-weight: bold;
+}
+.btn-custom:hover {
+  background-color: #b98b6f;
+  color: #fff;
 }
 
-@media (max-width: 767.98px) {
-    h2 {
-        font-size: 1.8em;
-    }
-    h2::after {
-        width: 50px;
-        height: 3px;
-    }
-    .hero-section .hero-text h2 {
-        font-size: 2em;
-    }
-    .lead {
-        font-size: 1rem;
-    }
-    .btn {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .card-body {
-        padding: 1rem;
-    }
-    .card-title {
-        font-size: 1.2rem;
-    }
+/* Form styling */
+form.bg-white {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section titles */
+h2, h5 {
+  color: #4a332a;
 }
