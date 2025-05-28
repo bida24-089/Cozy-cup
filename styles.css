@@ -59,3 +59,17 @@ form.bg-white {
 h2, h5 {
   color: #4a332a;
 }
+.card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #4a332a;
+}
