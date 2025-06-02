@@ -1,4 +1,4 @@
-<script>
+
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -19,4 +19,3 @@
         formMessage.classList.add("text-danger");
       }
     });
-  </script>
