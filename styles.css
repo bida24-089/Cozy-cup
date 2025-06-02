@@ -121,9 +121,15 @@ form#contactForm textarea:focus {
 
 .review-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.review-card.hover-effect {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+.review-card.hover-slide {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+
